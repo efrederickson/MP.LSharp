@@ -6,6 +6,12 @@ For all the latest information visit the L Sharp home page (www.lsharp.org).
 Rob Blackwell
 August 2006
 
+MP.Lsharp is L# for mlnlover11 Productions.
+http://elijah.awesome99.org/index.php/lsharp
+
+Elijah Frederickson
+9:45 AM 9/30/2011
+
 NOTE: 
 Compiling cannot load short DLLs, you MUST give the whole path. 
     trying to figure out why this is...
