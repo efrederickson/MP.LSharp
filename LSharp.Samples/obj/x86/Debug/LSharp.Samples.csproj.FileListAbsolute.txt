@@ -1,0 +1,26 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\LSharp.Samples.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\LSharp.Samples.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\obj\x86\Debug\LSharp.Samples.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\obj\x86\Debug\LSharp.Samples.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\RSS.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\WinForms.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\Factorial.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\Fibonacci.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\Greeting.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\HelloWorld.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\MsgBox.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Samples\bin\Debug\Samples\Classes.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\RSS.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\Factorial.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\Fibonacci.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\Greeting.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\HelloWorld.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\MsgBox.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\WinForms.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\Classes.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Samples.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Samples.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Samples\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Samples\obj\x86\Debug\LSharp.Samples.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Samples\obj\x86\Debug\LSharp.Samples.pdb

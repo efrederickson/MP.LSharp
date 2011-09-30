@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{D686A663-7BA5-456F-A5AB-FCFC2D8FDE97}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LSharp.Studio.Debugger</RootNamespace>
+    <AssemblyName>LSharp.Studio.Debugger</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Debugger.cs" />
+    <Compile Include="DebugManagerForm.cs" />
+    <Compile Include="DebugManagerForm.Designer.cs">
+      <DependentUpon>DebugManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DebugMenu.cs" />
+    <Compile Include="DebugMenu.Designer.cs">
+      <DependentUpon>DebugMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowErrorForm.cs" />
+    <Compile Include="ShowErrorForm.Designer.cs">
+      <DependentUpon>ShowErrorForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LSharp Studio\Alsing.SyntaxBox\SyntaxBox.csproj">
+      <Project>{D1AD0DD6-66BB-4791-B712-9B222C90EB7C}</Project>
+      <Name>SyntaxBox</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp Studio\LSharp.Studio.Core\LSharp.Studio.Core.csproj">
+      <Project>{033AC57D-171A-474E-9BA2-C0E3B55B5A3C}</Project>
+      <Name>LSharp.Studio.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp Studio\WinFormsUI\WinFormsUI.csproj">
+      <Project>{F32C0B4E-2919-4AA1-A2C0-FFA91CDA99F3}</Project>
+      <Name>WinFormsUI</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp\LSharp.csproj">
+      <Project>{419E259F-E9C0-4E01-BA19-709FE84DEAD5}</Project>
+      <Name>LSharp</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Break.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Continue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Start.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\StepInto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\StepOut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\StepOver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Stop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DebugManagerForm.resx">
+      <DependentUpon>DebugManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugMenu.resx">
+      <DependentUpon>DebugMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowErrorForm.resx">
+      <DependentUpon>ShowErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

@@ -1,0 +1,7 @@
+H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x64\FreeImage.dll
+H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x64\Fireball.Core.dll
+H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x64\Fireball.Core.pdb
+H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x64\Fireball.Core.XML
+H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Core\obj\x64\Debug\ResolveAssemblyReference.cache
+H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Core\obj\x64\Debug\Fireball.Core.dll
+H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Core\obj\x64\Debug\Fireball.Core.pdb

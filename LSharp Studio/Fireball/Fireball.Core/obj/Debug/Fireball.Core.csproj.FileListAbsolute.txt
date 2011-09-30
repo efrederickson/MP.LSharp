@@ -1,0 +1,4 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\FreeImage.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Fireball.Core.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Core\obj\Debug\Fireball.Core.dll

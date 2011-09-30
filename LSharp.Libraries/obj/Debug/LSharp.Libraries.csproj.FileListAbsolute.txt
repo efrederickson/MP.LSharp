@@ -1,0 +1,16 @@
+H:\LISP\LSharp\v1\LSharp.Libraries\bin\Debug\LSharp.Libraries.dll
+H:\LISP\LSharp\v1\LSharp.Libraries\bin\Debug\LSharp.Libraries.pdb
+H:\LISP\LSharp\v1\LSharp.Libraries\bin\Debug\LSharp.Libraries.xml
+H:\LISP\LSharp\v1\LSharp.Libraries\obj\Debug\ResolveAssemblyReference.cache
+H:\LISP\LSharp\v1\LSharp.Libraries\obj\Debug\LSharp.Libraries.dll
+H:\LISP\LSharp\v1\LSharp.Libraries\obj\Debug\LSharp.Libraries.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Libraries.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Libraries.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Libraries.xml
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Debug\LSharp.InspectorForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Debug\LSharp.Libraries.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Debug\LSharp.Libraries.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Libraries.README.txt

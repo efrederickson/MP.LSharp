@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{CD28FA75-8429-45DB-BF12-26751D278BC3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>LSharp.SharpDevelop.AddIn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.Core">
+      <HintPath>..\..\..\..\SharpDevelop\bin\ICSharpCode.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpDevelop">
+      <HintPath>..\..\..\..\SharpDevelop\bin\ICSharpCode.SharpDevelop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpDevelop.Dom">
+      <HintPath>..\..\..\..\SharpDevelop\bin\ICSharpCode.SharpDevelop.Dom.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LSharp.Microsoft.Build.targets">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TODO.txt" />
+    <None Include="LSharp.SharpDevelop.AddIn.addin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\LS-Mode.xshd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>LSharp.SharpDevelop.AddIn.Resources.LS-Mode.xshd</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LSharp.ico">
+      <LogicalName>LSharp.ProjectIcon</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LSharp.png">
+      <LogicalName>LSharp.FileIcon</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AssemblyInfo.cs" />
+    <Compile Include="Src\LSharpLanguageBinding.cs" />
+    <Compile Include="Src\LSharpLanguageProperties.cs" />
+    <Compile Include="Src\LSharpProject.cs" />
+    <Compile Include="Src\LSharpProjectBinding.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\LSharp.Interpreter\LSharp.Interpreter.csproj">
+      <Project>{8141886D-307B-4030-9320-8821B859AF66}</Project>
+      <Name>LSharp.Interpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LSharp.Launcher\LSharp.Launcher.csproj">
+      <Project>{4E0A832A-2B69-43EE-A368-F65E45055D01}</Project>
+      <Name>LSharp.Launcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LSharpCompilerConsole\LSharp.Compiler.csproj">
+      <Project>{E429600B-B981-4F6D-A2EF-9BE2CD74F09A}</Project>
+      <Name>LSharp.Compiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LSharp\LSharp.csproj">
+      <Project>{419E259F-E9C0-4E01-BA19-709FE84DEAD5}</Project>
+      <Name>LSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp.MSBuild.Tasks\LSharp.MSBuild.Tasks.csproj">
+      <Project>{F6FE5CE4-6D13-43EF-826A-60BA271B0E27}</Project>
+      <Name>LSharp.MSBuild.Tasks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\ConsoleProject.xpt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Empty.xft">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

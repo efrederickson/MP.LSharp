@@ -1,0 +1,7 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Fireball.SyntaxDocument.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.SyntaxDocument\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.SyntaxDocument\obj\Debug\Fireball.Syntax.RowEventArgs.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.SyntaxDocument\obj\Debug\Fireball.Syntax.TextStyleDesignerDialog.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.SyntaxDocument\obj\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.SyntaxDocument\obj\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.SyntaxDocument\obj\Debug\Fireball.SyntaxDocument.dll

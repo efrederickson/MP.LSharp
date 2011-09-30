@@ -1,0 +1,15 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\FreeImage.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Fireball.Windows.Forms.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Properties.Resources.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.Dialogs.WizardControl.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.FormJpgQuality.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.Dialogs.WizardForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.Dialogs.WizardPanel.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.ImagePreview.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.TuxBar.TuxBarItem.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.ColorChooseControl.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.IntelliMouseControl.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Windows.Forms\obj\Debug\Fireball.Windows.Forms.dll

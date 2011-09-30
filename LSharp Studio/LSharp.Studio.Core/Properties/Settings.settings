@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LSharp.Studio.Core.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultSaveLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SET</Value>
+    </Setting>
+    <Setting Name="CompileType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

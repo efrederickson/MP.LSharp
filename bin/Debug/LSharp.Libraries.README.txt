@@ -1,0 +1,8 @@
+﻿You must create an instance of container with (environment) to use its functions.
+
+FUNCTION NAME:             DESCRIPTION                              USAGE EXAMPLE
+play-sound            Plays a sound from filename             (play-sound "C:\\sound.mp3")
+gui-inspect    Shows a form with information about <object>    (gui-inspect (new Form))
+
+TODO: 
+    The Certificate policy function (what is this used for?)

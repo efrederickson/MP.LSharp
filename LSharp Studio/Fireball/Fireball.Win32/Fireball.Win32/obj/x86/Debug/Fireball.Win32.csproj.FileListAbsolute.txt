@@ -1,0 +1,10 @@
+D:\dev\CSharp\LuaEdit\bin\Debug\x86\Fireball.Win32.dll
+D:\dev\CSharp\LuaEdit\bin\Debug\x86\Fireball.Win32.pdb
+D:\dev\CSharp\LuaEdit\Components\Fireball\Fireball.Win32\Fireball.Win32\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\dev\CSharp\LuaEdit\Components\Fireball\Fireball.Win32\Fireball.Win32\obj\x86\Debug\Fireball.Win32.dll
+D:\dev\CSharp\LuaEdit\Components\Fireball\Fireball.Win32\Fireball.Win32\obj\x86\Debug\Fireball.Win32.pdb
+H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x86\Fireball.Win32.dll
+H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x86\Fireball.Win32.pdb
+H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Win32\Fireball.Win32\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Win32\Fireball.Win32\obj\x86\Debug\Fireball.Win32.dll
+H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Win32\Fireball.Win32\obj\x86\Debug\Fireball.Win32.pdb

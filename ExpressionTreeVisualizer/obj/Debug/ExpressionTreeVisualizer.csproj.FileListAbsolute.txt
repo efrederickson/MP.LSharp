@@ -1,0 +1,5 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\ExpressionTreeVisualizer\bin\Debug\ExpressionTreeVisualizer.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\ExpressionTreeVisualizer\bin\Debug\ExpressionTreeVisualizer.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\ExpressionTreeVisualizer\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\ExpressionTreeVisualizer\obj\Debug\ExpressionTreeVisualizer.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\ExpressionTreeVisualizer\obj\Debug\ExpressionTreeVisualizer.pdb

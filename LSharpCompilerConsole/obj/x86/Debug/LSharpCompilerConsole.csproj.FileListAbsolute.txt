@@ -1,0 +1,19 @@
+H:\LISP\LSharp\v2\LSharpCompilerConsole\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\LISP\LSharp\v2\LSharpCompilerConsole\bin\Debug\LSharpCompilerConsole.exe
+H:\LISP\LSharp\v2\LSharpCompilerConsole\bin\Debug\LSharpCompilerConsole.pdb
+H:\LISP\LSharp\v2\LSharpCompilerConsole\bin\Debug\LSharp.Compiler.dll
+H:\LISP\LSharp\v2\LSharpCompilerConsole\bin\Debug\LSharp.dll
+H:\LISP\LSharp\v2\LSharpCompilerConsole\bin\Debug\LSharp.Compiler.pdb
+H:\LISP\LSharp\v2\LSharpCompilerConsole\bin\Debug\LSharp.pdb
+H:\LISP\LSharp\v2\LSharpCompilerConsole\obj\x86\Debug\LSharpCompilerConsole.exe
+H:\LISP\LSharp\v2\LSharpCompilerConsole\obj\x86\Debug\LSharpCompilerConsole.pdb
+H:\LISP\LSharp\v2\LSharpCompilerConsole\bin\Debug\Sample.xl
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\Sample.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\LSharpCompilerConsole.exe.config
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\LSharpCompilerConsole.exe
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\LSharpCompilerConsole.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\LSharp.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\LSharp.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\obj\x86\Debug\LSharpCompilerConsole.exe
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\obj\x86\Debug\LSharpCompilerConsole.pdb

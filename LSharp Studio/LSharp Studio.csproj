@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{E51CA4F9-A46A-442B-9916-BDC1F239980F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LSharp.Studio</RootNamespace>
+    <AssemblyName>LSharp Studio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ApplicationIcon>..\LSharp.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <StartArguments>..\..\lsi.ls</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExpressionTreeVisualizer\ExpressionTreeVisualizer.csproj">
+      <Project>{97D88080-A3E3-4E05-82E7-7365B36C67EB}</Project>
+      <Name>ExpressionTreeVisualizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp.Interpreter\LSharp.Interpreter.csproj">
+      <Project>{8141886D-307B-4030-9320-8821B859AF66}</Project>
+      <Name>LSharp.Interpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp.Launcher\LSharp.Launcher.csproj">
+      <Project>{4E0A832A-2B69-43EE-A368-F65E45055D01}</Project>
+      <Name>LSharp.Launcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp.Libraries\LSharp.Libraries.csproj">
+      <Project>{072BF7BB-AFB6-4864-891E-E74F84C29553}</Project>
+      <Name>LSharp.Libraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp.Studio.Debugger\LSharp.Studio.Debugger.csproj">
+      <Project>{D686A663-7BA5-456F-A5AB-FCFC2D8FDE97}</Project>
+      <Name>LSharp.Studio.Debugger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp.Web\LSharp.Web.csproj">
+      <Project>{DCAD1830-4FA2-478A-BA00-2ECAF006C77E}</Project>
+      <Name>LSharp.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharpCompilerConsole\LSharp.Compiler.csproj">
+      <Project>{E429600B-B981-4F6D-A2EF-9BE2CD74F09A}</Project>
+      <Name>LSharp.Compiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp\LSharp.csproj">
+      <Project>{34FFB463-7DC4-4A68-9339-A68B02CD5199}</Project>
+      <Name>LSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.CodeEditor.SyntaxFiles\Fireball.CodeEditor.SyntaxFiles.csproj">
+      <Project>{3814F627-858A-42A3-9AAF-CD649413F2A8}</Project>
+      <Name>Fireball.CodeEditor.SyntaxFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.CodeEditor\Fireball.CodeEditor\Fireball.CodeEditor.csproj">
+      <Project>{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}</Project>
+      <Name>Fireball.CodeEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.Core\Fireball.Core.csproj">
+      <Project>{909AD284-7020-4FA9-A55E-7C633A641724}</Project>
+      <Name>Fireball.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.Plugins\Fireball.Plugins\Fireball.Plugins.csproj">
+      <Project>{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}</Project>
+      <Name>Fireball.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.Printing\Fireball.Printing\Fireball.Printing.csproj">
+      <Project>{DAA87377-3E4B-4FE2-B932-D4DC38526FFF}</Project>
+      <Name>Fireball.Printing</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.SyntaxDocument\Fireball.SyntaxDocument.csproj">
+      <Project>{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}</Project>
+      <Name>Fireball.SyntaxDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.Win32\Fireball.Win32\Fireball.Win32.csproj">
+      <Project>{A72D738D-B07F-4920-B4E7-543D18967FBF}</Project>
+      <Name>Fireball.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fireball\Fireball.Windows.Forms\Fireball.Windows.Forms.csproj">
+      <Project>{0E253078-0AFA-4B69-B27A-001B96735D60}</Project>
+      <Name>Fireball.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LSharp.Samples\LSharp.Samples.csproj">
+      <Project>{DA2CCAB9-CED7-4B19-84EC-4818BFB2DA1A}</Project>
+      <Name>LSharp.Samples</Name>
+    </ProjectReference>
+    <ProjectReference Include="LSharp.Studio.Core\LSharp.Studio.Core.csproj">
+      <Project>{033AC57D-171A-474E-9BA2-C0E3B55B5A3C}</Project>
+      <Name>LSharp.Studio.Core</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="LSharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

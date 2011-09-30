@@ -1,0 +1,4 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\bin\Release\LSharp.Libraries.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\bin\Release\LSharp.Libraries.xml
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Release\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Libraries\obj\Release\LSharp.Libraries.dll

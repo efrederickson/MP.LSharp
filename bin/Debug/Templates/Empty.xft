@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Template author="Elijah Frederickson" version="1.0">
+	<Config
+		  name        = "${res:Templates.File.EmptyFile.Name}"
+		  icon        = "L#File"
+		  category    = "L#"
+		  defaultname = "Empty${Number}.ls"
+		  language    = "LSharp"/>
+	 
+	<Description>${res:Templates.File.EmptyFile.Description}</Description>
+	
+	<Files>
+		<File name="${FullName}" language="L#">
+</File>
+	</Files>
+	<AdditionalOptions/>
+</Template>
+
+

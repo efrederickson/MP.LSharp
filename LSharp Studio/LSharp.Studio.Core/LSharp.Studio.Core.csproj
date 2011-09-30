@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{033AC57D-171A-474E-9BA2-C0E3B55B5A3C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LSharp.Studio.Core</RootNamespace>
+    <AssemblyName>LSharp.Studio.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CodeEditingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CodeEditingForm.Designer.cs">
+      <DependentUpon>CodeEditingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InspectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InspectorForm.Designer.cs">
+      <DependentUpon>InspectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OutputForm.Designer.cs">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetDefaultProgramsForm.cs" />
+    <Compile Include="Forms\SetDefaultProgramsForm.Designer.cs">
+      <DependentUpon>SetDefaultProgramsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewEnvContentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewEnvContentsForm.Designer.cs">
+      <DependentUpon>ViewEnvContentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsLoader.cs" />
+    <Compile Include="Plugins\AvailablePlugin.cs" />
+    <Compile Include="Plugins\ICodeEditor.cs" />
+    <Compile Include="Plugins\IPlugin.cs" />
+    <Compile Include="Plugins\PluginManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Utils\OutputWatcher.cs" />
+    <Compile Include="Utils\ToolStripRenderers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AddIns\LSharp.SharpDevelop.AddIn\LSharp.SharpDevelop.AddIn.csproj">
+      <Project>{CD28FA75-8429-45DB-BF12-26751D278BC3}</Project>
+      <Name>LSharp.SharpDevelop.AddIn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExpressionTreeVisualizer\ExpressionTreeVisualizer.csproj">
+      <Project>{97D88080-A3E3-4E05-82E7-7365B36C67EB}</Project>
+      <Name>ExpressionTreeVisualizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LSharp.Interpreter\LSharp.Interpreter.csproj">
+      <Project>{8141886D-307B-4030-9320-8821B859AF66}</Project>
+      <Name>LSharp.Interpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LSharp\LSharp.csproj">
+      <Project>{34FFB463-7DC4-4A68-9339-A68B02CD5199}</Project>
+      <Name>LSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Alsing.SyntaxBox\SyntaxBox.csproj">
+      <Project>{19EF75B2-B414-4EB0-9486-160FAF93E62C}</Project>
+      <Name>SyntaxBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.CodeEditor.SyntaxFiles\Fireball.CodeEditor.SyntaxFiles.csproj">
+      <Project>{3814F627-858A-42A3-9AAF-CD649413F2A8}</Project>
+      <Name>Fireball.CodeEditor.SyntaxFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.CodeEditor\Fireball.CodeEditor\Fireball.CodeEditor.csproj">
+      <Project>{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}</Project>
+      <Name>Fireball.CodeEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.Core\Fireball.Core.csproj">
+      <Project>{909AD284-7020-4FA9-A55E-7C633A641724}</Project>
+      <Name>Fireball.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.Plugins\Fireball.Plugins\Fireball.Plugins.csproj">
+      <Project>{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}</Project>
+      <Name>Fireball.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.Printing\Fireball.Printing\Fireball.Printing.csproj">
+      <Project>{DAA87377-3E4B-4FE2-B932-D4DC38526FFF}</Project>
+      <Name>Fireball.Printing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.SyntaxDocument\Fireball.SyntaxDocument.csproj">
+      <Project>{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}</Project>
+      <Name>Fireball.SyntaxDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.Win32\Fireball.Win32\Fireball.Win32.csproj">
+      <Project>{A72D738D-B07F-4920-B4E7-543D18967FBF}</Project>
+      <Name>Fireball.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fireball\Fireball.Windows.Forms\Fireball.Windows.Forms.csproj">
+      <Project>{0E253078-0AFA-4B69-B27A-001B96735D60}</Project>
+      <Name>Fireball.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CodeEditingForm.resx">
+      <DependentUpon>CodeEditingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InspectorForm.resx">
+      <DependentUpon>InspectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OutputForm.resx">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetDefaultProgramsForm.resx">
+      <DependentUpon>SetDefaultProgramsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewEnvContentsForm.resx">
+      <DependentUpon>ViewEnvContentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LSharp.syn">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="docbook.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="reference.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ClearOutput.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ToggleWordWrap.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

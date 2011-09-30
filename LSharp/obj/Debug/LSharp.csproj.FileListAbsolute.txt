@@ -1,0 +1,10 @@
+H:\LISP\LSharp\v1\LSharp\bin\Debug\LSharp.dll
+H:\LISP\LSharp\v1\LSharp\bin\Debug\LSharp.pdb
+H:\LISP\LSharp\v1\LSharp\obj\Debug\ResolveAssemblyReference.cache
+H:\LISP\LSharp\v1\LSharp\obj\Debug\LSharp.dll
+H:\LISP\LSharp\v1\LSharp\obj\Debug\LSharp.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp\obj\Debug\LSharp.dll
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp\obj\Debug\LSharp.pdb

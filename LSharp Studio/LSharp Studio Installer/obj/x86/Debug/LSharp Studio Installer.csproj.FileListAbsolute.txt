@@ -1,0 +1,10 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\bin\Debug\LSharp Studio Installer.exe.config
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\bin\Debug\LSharp Studio Installer.exe
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\bin\Debug\LSharp Studio Installer.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\obj\x86\Debug\LSharp_Studio_Installer.ExtractorForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\obj\x86\Debug\LSharp_Studio_Installer.MainForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\obj\x86\Debug\LSharp Studio Installer.exe
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp Studio Installer\obj\x86\Debug\LSharp Studio Installer.pdb
