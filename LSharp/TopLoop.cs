@@ -63,7 +63,7 @@ namespace LSharp
 		public void Run(TextReader reader, TextWriter writer, TextWriter error) 
 		{
 			Symbol LAST = Symbol.FromName("?");
-			
+			Symbol LAST_ERROR = Symbol.FromName("*error*");
 			while (true) 
 			{
 				try 
@@ -79,10 +79,12 @@ namespace LSharp
 				catch (LSharpException e) 
 				{
 					error.WriteLine(e.Message);
+					environment.AssignLocal(LAST_ERROR, e);
 				}
 				catch (Exception e) 
 				{
 					error.WriteLine(e);
+					environment.AssignLocal(LAST_ERROR, e);
 				}
 			}
 		}

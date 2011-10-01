@@ -1,8 +1,10 @@
 (using "System")
 (using "System.CodeDom.Compiler")
 (using "System.Collections.Generic")
+(using "System.Collections.Specialized")
 (using "System.Diagnostics")
 (using "System.IO")
+;;;(using "LSharp.Compiler")
 
 (prl "L# Compiler version 1.0 (Written in L#)")
 (prl "")
@@ -18,7 +20,7 @@
 
 (= ot LSharp.Compiler.OutputType.Exe)
 (prl "Compiling ")
-(= newArgs1 (new List<string>))
+(= newArgs1 (new System.Collections.Specialized.StringCollection)) ;;; FIXME
 (foreach arg args
 	(if (startswith arg "-out:")
 		(do 
@@ -36,10 +38,10 @@
 	)
 )
 (prl "...")
-(= newArgs (new string [count newArgs1])) ;;; FIXME
+(= newArgs null)) ;;; FIXME (new string[])
 (TrimExcess newArgs1)
 (CopyTo newArgs1 newArgs)
-(= r LSharp.Compiler.Compile(newArgs, ot) ;;; FIXME
+(= r (call Compile Compiler newArgs, ot))
 (if (eql r null) 
 	(do 
 		(prl "Failed to Compile: Unspecified error!")
@@ -54,6 +56,6 @@
 		)
 	)
 )
-(prl "Compiled to "  (GetFileNameWithoutExtension Path newArgs[0]) (if (eql ot LSharp.Compiler.OutputType.Dll) ".dll" ".exe"));
+(prl "Compiled to "  (GetFileNameWithoutExtension Path newArgs[0]) (if (eql ot LSharp.Compiler.OutputType.Dll) ".dll" ".exe")) ;;; FIXME
 ;;;Process.Start(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(args[0]), System.IO.Path.GetFileNameWithoutExtension(args[0]) + ".exe"));
 (exit 0)

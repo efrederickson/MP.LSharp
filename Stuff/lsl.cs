@@ -7,9 +7,9 @@ namespace LSharp
 	/// <summary>
 	/// the LSharp script that is compiled to an EXE/DLL
 	/// </summary>
-	public class ClassName1088736047
+	public class ClassName1759486574
 	{
-		string[] LSharpCode = {"(using \"System.Windows.Forms\")","",";;; LSL in L#",";;; MAKE SURE TO COMPILE AS A WinForms PROGRAM!!","(= env system.Environment)","(= filename (item env 0))","(= filename (Replace filename \"\\\\\" \"\\\\\\\\\"))","",";;; the beauty of this is we just need to call Load...","(load filename)"};
+		string[] LSharpCode = {"(using \"System.Windows.Forms\")","",";;; LSL in L#",";;; MAKE SURE TO COMPILE AS A WinForms PROGRAM!!","(= env system.Environment)","(= filename (GetValue (GetCommandLineArgs env) 0))","(= filename (Replace filename \"\\\\\" \"\\\\\\\\\"))","",";;; the beauty of this is we just need to call Load... theoretically.","(load filename)"};
 		LSharp.Runtime runtime;
 		//Environment globalEnvironment;
 				
@@ -17,7 +17,7 @@ namespace LSharp
 		public static void Main(string[] args)
 		{
 			AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(Resolver);
-			new ClassName1088736047().Activate(args);
+			new ClassName1759486574().Activate(args);
 		}
 		
 		public void Activate(string[] args)

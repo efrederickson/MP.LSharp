@@ -48,7 +48,8 @@ namespace LSharp
 				try 
 				{
 					source.Append("public object " + method.Name + "(");
-					if (method.args.Length > 0)
+					// 9/30/11 fixed so 0 arguments are allowed.
+					if (method.args.Length > 0 & !string.IsNullOrEmpty(method.args[0]))
 					{
 						source.Append("object " + method.args[0]);
 						for (int i = 1; i < method.args.Length; i++)
@@ -57,7 +58,7 @@ namespace LSharp
 					source.Append(") {\n");
 					source.Append("object retValue = null;");
 					source.Append("\tLSharp.Environment env = new LSharp.Environment();\n");
-					if (method.args.Length > 0)
+					if (method.args.Length > 0 & !string.IsNullOrEmpty(method.args[0]))
 					{
 						source.AppendLine("\tRuntime.EvalString(\"(= " + method.args[0] + " \" + " + method.args[0] +  " + \")\", env);");
 						for (int i = 1; i < method.args.Length; i++)

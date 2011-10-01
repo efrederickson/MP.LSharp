@@ -28,4 +28,5 @@ namespace LSharp
 	/// returns some object as a result.
 	/// </summary>
 	public delegate Object Function(Cons argument, Environment environment);
+	
 }

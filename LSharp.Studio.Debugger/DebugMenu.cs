@@ -18,6 +18,7 @@ namespace LSharp.Studio.Debugger
 	/// </summary>
 	public partial class DebugMenu : UserControl
 	{
+	    string arguments = "";
 		Debugger debugger = new Debugger();
 		public DebugMenu()
 		{
@@ -34,7 +35,8 @@ namespace LSharp.Studio.Debugger
 		void StartDebuggingMenuItem_Click(object sender, EventArgs e)
 		{
 			debugger.Start(LSharp.Studio.MainForm.Instance.GetActiveCodeEditor().TextBox,
-			               LSharp.Studio.MainForm.Instance.GetActiveCodeEditor().SyntaxDoc);
+			               LSharp.Studio.MainForm.Instance.GetActiveCodeEditor().SyntaxDoc, 
+			               arguments);
 		}
 		
 		void BreakMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +52,13 @@ namespace LSharp.Studio.Debugger
 		void StepOverMenuItem_Click(object sender, EventArgs e)
 		{
 			debugger.StepOver();
+		}
+		
+		void ToolStripButton1_Click(object sender, EventArgs e)
+		{
+		    GetArgsForm GAF = new GetArgsForm();
+		    if (GAF.ShowDialog() == DialogResult.OK)
+		        arguments = GAF.RESULT;
 		}
 	}
 }

@@ -4,9 +4,10 @@
 * use "<" and ">" commands for defining AssemblyInfo for the compiler?
 * Fix "reference" command in compiled programs
 * Create lsc in L#
-* Create lsi in L#
+! Create lsi in L# **DONE**
+* Create lsl in L#
 * Finish CodeDom
-* Create NRefactory Support
+* Finish NRefactory Support
 * Wpf/Silverlight/CF Support
 * IL Generator compiler
 * SharpDevelop/Visual Studio/MonoDevelop AddIns
@@ -14,7 +15,6 @@
 * Several of the special forms should now be redone as macros (e.g. when)
 * (typeof string) doesnt work on Mono
 * Class definition facility to be able to subclass existing classes and implement existing interfaces.
-* Build a compiler to generate *.exe or *.dll from an LSharp source.
 ! Build a better GUI based inspector. **DONE (gui-inspect <var>)** IN LSharp.Libraries
 * Build a CLOS like object system.
 * A bignumber facility for arbitrary length, arbitrary precision numbers and arithmetic.
@@ -38,7 +38,7 @@
 * If your brackets dont match you get a stack overflow - we need a more explanatory error message.
 * Trace should include execution timings.
 * Do we need funcall ?
-* no such method - give more details about types		
+* no such method - give more details about types
 * SortedList, Stack and Queue seem to be reversed
 * Add (Source x)
 *PS: Could you consider to make a additional framed HTML reference.

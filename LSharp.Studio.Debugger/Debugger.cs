@@ -18,6 +18,7 @@ namespace LSharp.Studio.Debugger
 	/// </summary>
 	public class Debugger
 	{
+	    private string Arguments = "";
 		private Alsing.Windows.Forms.SyntaxBoxControl syntaxBox;
 		private Alsing.SourceCode.SyntaxDocument syntaxDocument;
 		private System.ComponentModel.BackgroundWorker worker = new System.ComponentModel.BackgroundWorker();
@@ -33,7 +34,7 @@ namespace LSharp.Studio.Debugger
 			env.AssignLocal(Symbol.FromName("*debugger*"), this);
 			int line = 0;
 			syntaxDocument.Text += "\n";
-			_stopped = false;
+			_stopped = false; //TODO: Set arguments
 			while (line < syntaxDocument.Lines.Length)
 			{
 				if (_stopped)
@@ -56,10 +57,11 @@ namespace LSharp.Studio.Debugger
 			syntaxDocument.Text = syntaxDocument.Text.Remove(syntaxDocument.Text.LastIndexOf("\n"));
 		}
 		
-		public void Start(Alsing.Windows.Forms.SyntaxBoxControl syntaxbox, Alsing.SourceCode.SyntaxDocument syntaxdoc)
+		public void Start(Alsing.Windows.Forms.SyntaxBoxControl syntaxbox, Alsing.SourceCode.SyntaxDocument syntaxdoc, string arguments)
 		{
 			this.syntaxBox = syntaxbox;
 			this.syntaxDocument = syntaxdoc;
+			this.Arguments = arguments;
 			_stopped = false;
 			try {
 			worker.RunWorkerAsync();

@@ -303,9 +303,12 @@ namespace LSharp
 				return f.GetValue(arguments.First());
 			
 
-			// or an event ?
-
-			throw new LSharpException(string.Format("Call: No such method, property or field '{0}' on '{1}'", method.ToString(),type));
+			// FIXME: or an event ?
+			EventInfo e  = type.GetEvent(method.ToString(), bindingFlags); // | BindingFlags.Event)
+			if (e != null) // attempt to call the click event
+			    return e.GetRaiseMethod().Invoke(arguments.First(), parameters);
+			
+			throw new LSharpException(string.Format("Call: No such method, property, field, or event '{0}' on '{1}'", method.ToString(),type));
 
 			
 		}

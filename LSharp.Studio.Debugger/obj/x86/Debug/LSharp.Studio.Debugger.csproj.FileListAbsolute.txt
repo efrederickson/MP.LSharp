@@ -15,3 +15,4 @@ C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Studio.Debugger\obj\x86\Deb
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\LSharp.Studio.Debugger.dll
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\LSharp.Studio.Debugger.pdb
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\LSharp.Studio.Debugger.GetArgsForm.resources

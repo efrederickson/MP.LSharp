@@ -509,8 +509,8 @@ namespace LSharp
 		/// <summary>
 		/// (try expression catch [finally])
 		/// The try special form corresponds to the try-catch-finally construct found 
-		/// in C Sharp. If   catch is null then there is deemed to be no catch block 
-		/// at all. If an exception occurs, the variable it is bound to the Exception 
+		/// in C#. If catch is null then there is deemed to be no catch block 
+		/// at all. If an exception occurs, the variable "it" is bound to the Exception 
 		/// object in the local environment. 
 		/// </summary>
 		/// <param name="args"></param>
