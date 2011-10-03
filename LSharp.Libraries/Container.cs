@@ -27,6 +27,16 @@ namespace LSharp.Libraries
         }
         
         /// <summary>
+        /// Creates the Library entries for L#
+        /// </summary>
+        /// <param name="environment"></param>
+        public static void Register(Environment environment)
+        {
+            environment.Assign(Symbol.FromName("gui-inspect"), new Function(GuiInspect));
+            environment.Assign(Symbol.FromName("play-sound"), new Function(PlaySound));
+        }
+        
+        /// <summary>
         /// (gui-inspect OBJECT)
         /// shows a Form with data on the item OBJECT
         /// </summary>
@@ -37,7 +47,7 @@ namespace LSharp.Libraries
         {
             // TODO : Fix
             //string sname = (string) Functions.SymbolName(new Cons(args.First()), environment);
-            InspectorForm i = new InspectorForm(args.Car());
+            InspectorForm i = new InspectorForm(args.Car(), environment);
             i.ShowDialog();
             return args.First();
         }

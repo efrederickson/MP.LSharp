@@ -117,7 +117,6 @@ namespace LSharp
 			assemblyTable.Remove(assembly.FullName);
 		}
 
-
 		/// <summary>
 		/// Returns an array of all loaded assemblies
 		/// </summary>

@@ -20,6 +20,7 @@
 * A bignumber facility for arbitrary length, arbitrary precision numbers and arithmetic.
 * Ensure MONO can be a fully supported platform
 * Provide an initialization file - say init.ls which is run when the interpreter is invoked to allow the user to customize their environment. (See DotLisp)
+    its "boot.ls"
 * Provide a means of persisting one's environment, say (save filename) between interpreter sessions.
 * Write a good L Sharp specific mode for GNU Emacs, or maybe support SLIME.
 * Implement a wider range of ReaderMacros.

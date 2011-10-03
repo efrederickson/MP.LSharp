@@ -27,7 +27,7 @@ namespace LSharp.Interpreter
 	/// <summary>
 	/// Provides a command line interpreter for L Sharp
 	/// </summary>
-	class Program
+	public class Program
 	{
 
         /// <summary>

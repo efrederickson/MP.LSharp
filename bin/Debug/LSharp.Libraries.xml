@@ -15,6 +15,12 @@
             </summary>
             <param name="environment"></param>
         </member>
+        <member name="M:LSharp.Libraries.Container.Register(LSharp.Environment)">
+            <summary>
+            Creates the Library entries for L#
+            </summary>
+            <param name="environment"></param>
+        </member>
         <member name="M:LSharp.Libraries.Container.GuiInspect(LSharp.Cons,LSharp.Environment)">
             <summary>
             (gui-inspect OBJECT)
@@ -38,7 +44,7 @@
             The form for Gui-Inspect
             </summary>
         </member>
-        <member name="M:LSharp.InspectorForm.#ctor(System.Object)">
+        <member name="M:LSharp.InspectorForm.#ctor(System.Object,LSharp.Environment)">
             <summary>
             Initializes the form with ElementToInspect as the object being inspected
             </summary>

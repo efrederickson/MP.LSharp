@@ -129,8 +129,7 @@ namespace LSharp
             this.AssignLocal(Symbol.FromName("list"),new Function(Functions.List));
             this.AssignLocal(Symbol.FromName("load"),new Function(Functions.Load));
             this.AssignLocal(Symbol.FromName("&"),new Function(Functions.LogAnd));
-            // this happens to be multiline comment...
-            //this.AssignLocal(Symbol.FromName("|"),new Function(Functions.LogIor));
+            this.AssignLocal(Symbol.FromName("|"),new Function(Functions.LogIor));
             this.AssignLocal(Symbol.FromName("^"),new Function(Functions.LogXor));
             this.AssignLocal(Symbol.FromName("macroexpand"),new Function(Functions.MacroExpand));
             this.AssignLocal(Symbol.FromName("map"),new Function(Functions.Map));

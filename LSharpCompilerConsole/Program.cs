@@ -46,8 +46,14 @@ namespace LSharp.LSC
 					}
 				}
 				else {
-					Console.Write(arg + " ");
-					newArgs1.Add(arg);
+				    Console.Write(arg + " ");
+				    if (System.IO.File.Exists(arg))
+				        newArgs1.Add(arg);
+				    else
+				    {
+				        if (System.IO.File.Exists(arg + ".ls"))
+				            newArgs1.Add(arg + ".ls");
+				    }
 				}
 			}
 			Console.WriteLine("...");

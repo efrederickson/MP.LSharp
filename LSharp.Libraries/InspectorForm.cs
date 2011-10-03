@@ -18,7 +18,8 @@ namespace LSharp
         /// Initializes the form with ElementToInspect as the object being inspected
         /// </summary>
         /// <param name="ElementToInspect"></param>
-        public InspectorForm(object ElementToInspect)
+        /// <param name="env"></param>
+        public InspectorForm(object ElementToInspect,LSharp.Environment env)
         {
             InitializeComponent();
             textBox1.Text = Inspector.Inspect(ElementToInspect);

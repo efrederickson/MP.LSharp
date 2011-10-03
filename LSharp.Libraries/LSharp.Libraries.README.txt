@@ -1,4 +1,5 @@
 ﻿You must create an instance of container with (environment) to use its functions.
+Or, you can call (Register Container (environment)) to use it.
 
 FUNCTION NAME:             DESCRIPTION                              USAGE EXAMPLE
 play-sound            Plays a sound from filename             (play-sound "C:\\sound.mp3")

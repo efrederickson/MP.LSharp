@@ -1,12 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-# SharpDevelop 4.2.0.8108-alpha
+# SharpDevelop 4.2.0.8118-alpha
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{F1D910BC-CAB0-4D93-8DD7-424B802AFEAD}"
 	ProjectSection(SolutionItems) = preProject
 		AUTHORS.txt = AUTHORS.txt
 		README.txt = README.txt
 		TODO.txt = TODO.txt
+		CONTRIBUTORS.txt = CONTRIBUTORS.txt
+		GPL.txt = GPL.txt
+		HISTORY.txt = HISTORY.txt
+		LGPL.txt = LGPL.txt
+		LICENSE.txt = LICENSE.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CEA5B4C1-337E-4FF6-83EF-09AFCF7C8E2F}"

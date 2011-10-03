@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Language Name="LS 5.1" Startblock="LS Code">
+<Language Name="L#" Startblock="LS Code">
   <FileTypes>
     <FileType Extension=".ls" Name="LSharp Script"/>
   </FileTypes>
@@ -16,6 +16,7 @@
     <Keywords>
       <PatternGroup Name="Keywords" Style="Keyword" CaseSensitive="false">
         <Patterns>
+         |
           null
           nil
           t
@@ -154,7 +155,7 @@
     </ChildBlocks>
   </Block>
   <Block Name="Multiline Comment" Style="Comment" EscapeChar="" IsMultiline="true">
-    <Scope Start="|" End="|#" Style="Comment" Text="|...|"/>
+    <Scope Start="#|" End="|#" Style="Comment" Text="|...|"/>
     <Operators>
       <PatternGroup name="URL" Style="URL">
         <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
