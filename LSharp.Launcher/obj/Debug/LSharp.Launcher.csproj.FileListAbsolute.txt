@@ -11,3 +11,9 @@ C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\lsl.pdb
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Launcher\obj\Debug\ResolveAssemblyReference.cache
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Launcher\obj\Debug\lsl.exe
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Launcher\obj\Debug\lsl.pdb
+C:\Elijah - Libraries\LSharp\bin\Debug\lsl.exe.config
+C:\Elijah - Libraries\LSharp\bin\Debug\lsl.exe
+C:\Elijah - Libraries\LSharp\bin\Debug\lsl.pdb
+C:\Elijah - Libraries\LSharp\LSharp.Launcher\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\LSharp.Launcher\obj\Debug\lsl.exe
+C:\Elijah - Libraries\LSharp\LSharp.Launcher\obj\Debug\lsl.pdb

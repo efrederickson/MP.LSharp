@@ -1,3 +1,16 @@
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.AboutForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.CodeEditingForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.HelpForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.InspectorForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.OptionsForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.OutputForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.SetDefaultProgramsForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.ViewEnvContentsForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.MainForm.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Properties.Resources.resources
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Boot.ls
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Microsoft.Build.targets
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\reference.html
@@ -14,20 +27,38 @@ C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\license.txt
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Studio.Core.dll.config
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Studio.Core.dll
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Studio.Core.pdb
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.AboutForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.CodeEditingForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.HelpForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.InspectorForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.OptionsForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.OutputForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.ViewEnvContentsForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.MainForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Properties.Resources.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.read.0.tlog
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.0.tlog
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.dll
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.pdb
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.SetDefaultProgramsForm.resources
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Microsoft.Build.targets
+C:\Elijah - Libraries\LSharp\bin\Debug\Boot.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\reference.html
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.syn
+C:\Elijah - Libraries\LSharp\bin\Debug\docbook.css
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\ClearOutput.bmp
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\ToggleWordWrap.bmp
+C:\Elijah - Libraries\LSharp\bin\Debug\Templates\ConsoleProject.xpt
+C:\Elijah - Libraries\LSharp\bin\Debug\Templates\Empty.xft
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\LS-Mode.xshd
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.SharpDevelop.AddIn.addin
+C:\Elijah - Libraries\LSharp\bin\Debug\FreeImage.dll
+C:\Elijah - Libraries\LSharp\bin\Debug\license.txt
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Studio.Core.dll.config
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Studio.Core.dll
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Studio.Core.pdb
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.AboutForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.CodeEditingForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.HelpForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.InspectorForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.OptionsForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.OutputForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.SetDefaultProgramsForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.ViewEnvContentsForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.MainForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Properties.Resources.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.read.0.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.0.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.dll
+C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.pdb

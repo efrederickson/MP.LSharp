@@ -12,3 +12,10 @@ C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\lsi.pdb
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Interpreter\obj\Debug\ResolveAssemblyReference.cache
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Interpreter\obj\Debug\lsi.exe
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.Interpreter\obj\Debug\lsi.pdb
+C:\Elijah - Libraries\LSharp\bin\Debug\Boot.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\lsi.exe.config
+C:\Elijah - Libraries\LSharp\bin\Debug\lsi.exe
+C:\Elijah - Libraries\LSharp\bin\Debug\lsi.pdb
+C:\Elijah - Libraries\LSharp\LSharp.Interpreter\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\LSharp.Interpreter\obj\Debug\lsi.exe
+C:\Elijah - Libraries\LSharp\LSharp.Interpreter\obj\Debug\lsi.pdb

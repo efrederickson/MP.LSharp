@@ -31,7 +31,6 @@
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <StartArguments>..\..\lsi.ls</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -124,29 +123,9 @@
       <Project>{34FFB463-7DC4-4A68-9339-A68B02CD5199}</Project>
       <Name>LSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="Fireball\Fireball.CodeEditor.SyntaxFiles\Fireball.CodeEditor.SyntaxFiles.csproj">
-      <Project>{3814F627-858A-42A3-9AAF-CD649413F2A8}</Project>
-      <Name>Fireball.CodeEditor.SyntaxFiles</Name>
-    </ProjectReference>
-    <ProjectReference Include="Fireball\Fireball.CodeEditor\Fireball.CodeEditor\Fireball.CodeEditor.csproj">
-      <Project>{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}</Project>
-      <Name>Fireball.CodeEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="Fireball\Fireball.Core\Fireball.Core.csproj">
       <Project>{909AD284-7020-4FA9-A55E-7C633A641724}</Project>
       <Name>Fireball.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Fireball\Fireball.Plugins\Fireball.Plugins\Fireball.Plugins.csproj">
-      <Project>{582EB5E5-75F1-4BD4-8CDB-AEC5F9E201B2}</Project>
-      <Name>Fireball.Plugins</Name>
-    </ProjectReference>
-    <ProjectReference Include="Fireball\Fireball.Printing\Fireball.Printing\Fireball.Printing.csproj">
-      <Project>{DAA87377-3E4B-4FE2-B932-D4DC38526FFF}</Project>
-      <Name>Fireball.Printing</Name>
-    </ProjectReference>
-    <ProjectReference Include="Fireball\Fireball.SyntaxDocument\Fireball.SyntaxDocument.csproj">
-      <Project>{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}</Project>
-      <Name>Fireball.SyntaxDocument</Name>
     </ProjectReference>
     <ProjectReference Include="Fireball\Fireball.Win32\Fireball.Win32\Fireball.Win32.csproj">
       <Project>{A72D738D-B07F-4920-B4E7-543D18967FBF}</Project>

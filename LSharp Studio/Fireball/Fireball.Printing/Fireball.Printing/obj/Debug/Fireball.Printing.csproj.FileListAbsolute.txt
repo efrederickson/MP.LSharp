@@ -1,4 +1,0 @@
-C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\FreeImage.dll
-C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Fireball.Printing.dll
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Printing\Fireball.Printing\obj\Debug\ResolveAssemblyReference.cache
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Fireball\Fireball.Printing\Fireball.Printing\obj\Debug\Fireball.Printing.dll

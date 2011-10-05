@@ -41,7 +41,7 @@
 (= newArgs null)) ;;; FIXME (new string[])
 (TrimExcess newArgs1)
 (CopyTo newArgs1 newArgs)
-(= r (call Compile Compiler newArgs, ot))
+(= r (call Compile Compiler newArgs ot))
 (if (eql r null) 
 	(do 
 		(prl "Failed to Compile: Unspecified error!")

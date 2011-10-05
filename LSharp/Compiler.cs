@@ -152,7 +152,7 @@ namespace LSharp
             	case OutputType.WinFormsExe:
             		param.CompilerOptions = "/target:winexe";
             		break;
-            	default:
+            	default: // this shouldnt ever happen though...
             		param.CompilerOptions = "/target:exe";
             		break;
             }

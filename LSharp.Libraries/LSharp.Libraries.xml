@@ -49,6 +49,7 @@
             Initializes the form with ElementToInspect as the object being inspected
             </summary>
             <param name="ElementToInspect"></param>
+            <param name="env"></param>
         </member>
         <member name="F:LSharp.InspectorForm.components">
             <summary>

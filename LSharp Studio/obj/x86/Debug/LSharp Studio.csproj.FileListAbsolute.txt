@@ -1,4 +1,5 @@
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Boot.ls
+C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Libraries.README.txt
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Sample.ls
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\RSS.ls
 C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\Samples\Factorial.ls
@@ -31,6 +32,41 @@ C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\obj\x86\Debug\Genera
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\obj\x86\Debug\GenerateResource.write.0.tlog
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\obj\x86\Debug\LSharp Studio.exe
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\obj\x86\Debug\LSharp Studio.pdb
-C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.Libraries.README.txt
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\LSharp\bin\Debug\Boot.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Libraries.README.txt
+C:\Elijah - Libraries\LSharp\bin\Debug\Sample.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\RSS.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Factorial.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Fibonacci.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Greeting.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\HelloWorld.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\MsgBox.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\WinForms.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\reference.html
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.syn
+C:\Elijah - Libraries\LSharp\bin\Debug\docbook.css
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\ClearOutput.bmp
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\ToggleWordWrap.bmp
+C:\Elijah - Libraries\LSharp\bin\Debug\FreeImage.dll
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\Break.png
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\Continue.png
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\Start.png
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\StepInto.png
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\StepOut.png
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\StepOver.png
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\Stop.png
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Classes.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\license.txt
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp Studio.exe.config
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp Studio.exe
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp Studio.pdb
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\LSharp.Studio.SplashScreen.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\GenerateResource.read.0.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\GenerateResource.write.0.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\LSharp Studio.exe
+C:\Elijah - Libraries\LSharp\LSharp Studio\obj\x86\Debug\LSharp Studio.pdb

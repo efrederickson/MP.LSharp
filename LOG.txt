@@ -1,0 +1,2 @@
+10/3/2011: Created LOG File
+10/4/2011: Added function "item" (item <index> <array>), return array[index]

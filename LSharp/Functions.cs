@@ -620,8 +620,14 @@ namespace LSharp
             return result;
 
         }
-
-
+        
+        public static object Item(Cons args, Environment environment)
+        {
+            int index = (int)args.Car();
+            Array array = (Array) args.Cadr();
+            return array.GetValue(index);
+        }
+        
         /// <summary>
         /// (length expression)
         /// Returns the length of expression. If expression is null, length returns 0,

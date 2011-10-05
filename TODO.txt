@@ -1,6 +1,6 @@
 ** This file contains a (partial) list of bugs and todo items for ongoing LSharp development.
 
-* array indexing "[" and "]" ?
+* array indexing "[" and "]"?
 * use "<" and ">" commands for defining AssemblyInfo for the compiler?
 * Fix "reference" command in compiled programs
 * Create lsc in L#

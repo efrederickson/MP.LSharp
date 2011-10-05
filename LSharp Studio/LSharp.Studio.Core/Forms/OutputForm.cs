@@ -6,8 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-
-using Fireball.Syntax;
 using WeifenLuo.WinFormsUI.Docking;
 
 namespace LSharp.Studio.Core
@@ -67,8 +65,9 @@ namespace LSharp.Studio.Core
 
         private void tsbClearAll_Click(object sender, EventArgs e)
         {
-        	Utils.OutputWatcher _current = (Utils.OutputWatcher)tscboOutputTypes.SelectedItem;
+            Utils.OutputWatcher _current = (Utils.OutputWatcher)watchers[tscboOutputTypes.SelectedIndex];
         	_current.writer.Flush();
+        	_current.writer = new System.IO.StringWriter(); // FIXME
             txtOutput.Document.Clear();
         }
 

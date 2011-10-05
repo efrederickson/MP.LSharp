@@ -153,6 +153,7 @@ namespace LSharp
             this.AssignLocal(Symbol.FromName("throw"),new Function(Functions.Throw));
             this.AssignLocal(Symbol.FromName("typeof"),new Function(Functions.TypeOf));
             this.AssignLocal(Symbol.FromName("using"),new Function(Functions.Using));
+            this.AssignLocal(Symbol.FromName("item"), new Function(Functions.Item));
             
             // read table
             this.AssignLocal(Symbol.FromName("*readtable*"),ReadTable.DefaultReadTable());

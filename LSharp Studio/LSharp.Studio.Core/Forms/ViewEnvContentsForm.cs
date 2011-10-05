@@ -36,7 +36,7 @@ namespace LSharp.Studio.Core.Forms
 				string[] splitted = contents.Split(new string[] { "\n", ":"}, StringSplitOptions.None);
 				for (int i = 0; i < splitted.Length; i+=0)
 				{
-				    env[splitted[i]] = LSharp.Printer.WriteToString(splitted[i + 1]);
+				    env[splitted[i]] = splitted[i + 1];
 					listBox1.Items.Add(splitted[i]);
 					i += 2;
 				}
@@ -54,7 +54,7 @@ namespace LSharp.Studio.Core.Forms
 		{
 			try {
 			string item= (string) listBox1.SelectedItem;
-			textBox1.Text = (string) env[item];
+			textBox1.Text = env[item].ToString() + "\n" + "Item Details: \n" + LSharp.Inspector.Inspect(env[item].GetType());
 			} catch (Exception) {
 			
 			}

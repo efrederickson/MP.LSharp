@@ -1,7 +1,0 @@
-H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x86\FreeImage.dll
-H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x86\Fireball.Printing.dll
-H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x86\Fireball.Printing.pdb
-H:\cvs-1-12-13a\LuaEdit2010\bin\Debug\x86\Fireball.Printing.XML
-H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Printing\Fireball.Printing\obj\x86\Debug\ResolveAssemblyReference.cache
-H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Printing\Fireball.Printing\obj\x86\Debug\Fireball.Printing.dll
-H:\cvs-1-12-13a\LuaEdit2010\Components\Fireball\Fireball.Printing\Fireball.Printing\obj\x86\Debug\Fireball.Printing.pdb

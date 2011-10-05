@@ -56,3 +56,32 @@ C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Alsing.SyntaxBox\obj
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\GenerateResource.write.1.tlog
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\SyntaxBox.dll
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\SyntaxBox.pdb
+C:\Elijah - Libraries\LSharp\bin\Debug\SyntaxBox.dll
+C:\Elijah - Libraries\LSharp\bin\Debug\SyntaxBox.pdb
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.SyntaxBox.AutoListForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.SyntaxBox.TabListBox.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.BaseControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.BaseListBoxControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.BasePanelControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.SyntaxBox.EditViewControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.CoreLib.FormatLabelControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.InfoTipForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.CoreLib.IntelliMouseControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.CoreLib.RegionHandler.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.CoreLib.SplitViewChildControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.CoreLib.SplitViewControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.CoreLib.SplitViewParentControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.SyntaxBox.FindReplaceForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.SyntaxBox.GotoLineForm.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Controls.Syntaxbox.Dialogs.Settings.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Windows.Forms.SyntaxBoxControl.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.Design.CollectionEditorGui.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.SourceCode.SourceCodePrintDocument.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.SourceCode.SyntaxDocument.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Alsing.SourceCode.TextStyleDesignerDialog.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\Properties.Resources.resources
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\GenerateResource.write.1.tlog
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\SyntaxBox.dll
+C:\Elijah - Libraries\LSharp\LSharp Studio\Alsing.SyntaxBox\obj\Debug\SyntaxBox.pdb

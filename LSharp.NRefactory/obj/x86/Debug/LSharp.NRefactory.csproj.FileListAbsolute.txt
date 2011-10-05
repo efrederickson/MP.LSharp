@@ -3,3 +3,8 @@ C:\Elijah - Libraries\X Software Suite\LSharp\bin\Debug\LSharp.NRefactory.pdb
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.NRefactory\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.NRefactory\obj\x86\Debug\LSharp.NRefactory.dll
 C:\Elijah - Libraries\X Software Suite\LSharp\LSharp.NRefactory\obj\x86\Debug\LSharp.NRefactory.pdb
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.NRefactory.dll
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.NRefactory.pdb
+C:\Elijah - Libraries\LSharp\LSharp.NRefactory\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\LSharp.NRefactory\obj\x86\Debug\LSharp.NRefactory.dll
+C:\Elijah - Libraries\LSharp\LSharp.NRefactory\obj\x86\Debug\LSharp.NRefactory.pdb
