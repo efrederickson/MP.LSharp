@@ -54,6 +54,13 @@ namespace LSharp.Studio
 		private int documentcount = 1;
 		void NewToolStripMenuItem1Click(object sender, EventArgs e)
 		{
+		    if (System.IO.File.Exists(LSharp.Studio.Core.Properties.Settings.Default.DefaultSaveLocation + "\\LSharp Script " + documentcount + ".ls"))
+		    {
+		        LoadFile(LSharp.Studio.Core.Properties.Settings.Default.DefaultSaveLocation + "\\LSharp Script " + documentcount + ".ls");
+		        documentcount++;
+		        return;
+		    }
+
             CodeEditingForm frm1 = new CodeEditingForm("LSharp Script " + documentcount + ".ls");
 			frm1.TabText = "LSharp Script " + documentcount + ".ls";
             documentcount++;
@@ -226,9 +233,15 @@ namespace LSharp.Studio
                 Console.WriteLine("Cannot Run: No Open Document!");
                 return;
             }
-            // REPL after
-            
-            Process.Start(Application.StartupPath + "\\lsi.exe", "\"" + _fn + "\"" + " /repl");
+            // REPL after.
+            Process started = new Process();
+            started.Exited += delegate { 
+                Console.WriteLine("lsi exited with code " + started.ExitCode); 
+            };
+            ProcessStartInfo psi = new ProcessStartInfo(Application.StartupPath + "\\lsi.exe", "\"" + _fn + "\"" + " /repl");
+            psi.ErrorDialog=true;
+            started.StartInfo = psi;
+            started.Start();
         }
 
         private void closeCurrentWindowToolStripMenuItem_Click(object sender, EventArgs e)

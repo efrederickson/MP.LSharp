@@ -29,15 +29,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.Core">
-      <HintPath>..\..\..\..\SharpDevelop\bin\ICSharpCode.Core.dll</HintPath>
+      <HintPath>..\..\..\SharpDevelop\bin\ICSharpCode.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop">
-      <HintPath>..\..\..\..\SharpDevelop\bin\ICSharpCode.SharpDevelop.dll</HintPath>
+      <HintPath>..\..\..\SharpDevelop\bin\ICSharpCode.SharpDevelop.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop.Dom">
-      <HintPath>..\..\..\..\SharpDevelop\bin\ICSharpCode.SharpDevelop.Dom.dll</HintPath>
+      <HintPath>..\..\..\SharpDevelop\bin\ICSharpCode.SharpDevelop.Dom.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />

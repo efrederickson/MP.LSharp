@@ -31,7 +31,7 @@ namespace LSharp.Studio.Debugger
 		void worker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			LSharp.Environment env = new LSharp.Environment();
-			env.AssignLocal(Symbol.FromName("*debugger*"), this);
+			env.Assign(Symbol.FromName("*debugger*"), this);
 			int line = 0;
 			syntaxDocument.Text += "\n";
 			_stopped = false; //TODO: Set arguments
@@ -47,7 +47,7 @@ namespace LSharp.Studio.Debugger
 				try
 				{
 				object result = Runtime.EvalString(Nextcommand, env);
-				Console.WriteLine("Output from line '" + Nextcommand + "' (Line number " + line + "): " + Printer.WriteToString(result));
+				Console.WriteLine("Output from line '" + Nextcommand.Replace("\r\n" , "") + "' (Line number " + line + "): " + Printer.WriteToString(result));
 				} catch (Exception ex) {
 					ShowErrorForm err = new ShowErrorForm(ex);
 					err.ShowDialog();

@@ -78,6 +78,8 @@ namespace LSharp.Interpreter
 				{
 					// Load the script file in that environment
 					Banner();
+					// 10.4.2011: this is so that you know the file is loading
+					Console.WriteLine("> (load \"" + filename + "\")");
 					Runtime.EvalString(string.Format("(load \"{0}\")",filename), environment);
 					Runtime.EvalString("(= top (new TopLoop))", environment);
 					Runtime.EvalString("(call run top)", environment);
