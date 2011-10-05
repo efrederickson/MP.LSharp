@@ -13,5 +13,5 @@ Elijah Frederickson
 9:45 AM 9/30/2011
 
 NOTE: 
-Compiling cannot load short DLLs, you MUST give the whole path. 
+Compiling cannot load short DLLs, you MUST give the whole path. (OR "$(SDKPATH)<dllname>")
     trying to figure out why this is...
