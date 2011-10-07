@@ -75,6 +75,9 @@
     <None Include="Samples\File.ls">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Samples\Git.ls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Samples\Graphics.ls">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

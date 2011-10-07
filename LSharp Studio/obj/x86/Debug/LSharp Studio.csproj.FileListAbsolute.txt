@@ -99,3 +99,4 @@ C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Stack.ls
 C:\Elijah - Libraries\LSharp\bin\Debug\Samples\String.ls
 C:\Elijah - Libraries\LSharp\bin\Debug\Samples\try.ls
 C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Graphics.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Git.ls
