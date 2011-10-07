@@ -9,4 +9,4 @@
 (= c (new Class1))
 
 ;;; Run our method
-(call mname1 c "HAI!")
+(call mname1 c "HAI! from our class!")

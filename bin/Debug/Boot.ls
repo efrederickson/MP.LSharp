@@ -14,7 +14,7 @@
 
 (call Banner Program) ;;; Print the Banner from LSharp.Interpreter.Program
 
-;;; Run lsi
+;;; Run lsi:
 
 ;;; Assign some variables
 (= ? nil)
@@ -35,3 +35,6 @@
         )
     )
 )
+;;; the only way that this is come into is if you can exit this 
+;;; eternal while without calling (exit) or something of that 
+;;; sort. TODO: test if anything can happen after eternal loops

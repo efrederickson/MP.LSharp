@@ -1,2 +1,3 @@
-;; Hello World in L#
-(prl  "Hello World")
+;;; Hello World in L Sharp
+
+(WriteLine Console "Hello World")

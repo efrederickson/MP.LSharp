@@ -1,3 +1,4 @@
 10/3/2011: Created LOG File
 10/4/2011: Added function "item" (item <index> <array>), return array[index]
 10/5/2011: Changed "boot.ls" under LSharp.Interactive
+10/6/2011: Added a bunch of samples
