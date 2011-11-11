@@ -1,0 +1,5 @@
+﻿BEGIN System.Windows.Forms.Form frm
+    Size = System.Drawing.Size(100, 100)
+    Name = "Form1"
+    TabIndex = 1
+ENDOBJECT

@@ -2,14 +2,14 @@ using System;
 using System.Reflection;
 using System.IO;
 
-namespace LSharp
+namespace LSharp.Sample
 {
 	/// <summary>
 	/// the LSharp script that is compiled to an EXE/DLL
 	/// </summary>
-	public class ClassName1284997552
+	public class ClassName136296593
 	{
-		string[] LSharpCode = {"(reference \"C:\\\\windows\\\\microsoft.net\\\\framework\\\\v4.0.30319\\\\System.Windows.Forms.dll\")","(= frm (new \"System.Windows.Forms.Form\"))","(ShowDialog frm)"};
+		string[] LSharpCode = {"~NAMESPACE = LSharp.Sample~","~CLASS = SampleClass~","(reference \"$(SDKPath)System.Windows.Forms.dll\")","(= frm (new \"System.Windows.Forms.Form\"))","(ShowDialog frm)"};
 		LSharp.Runtime runtime;
 		//Environment globalEnvironment;
 				
@@ -17,21 +17,33 @@ namespace LSharp
 		public static void Main(string[] args)
 		{
 			AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(Resolver);
-			new ClassName1284997552().Activate(args);
+			new ClassName136296593().Activate(args);
 		}
 		
 		public void Activate(string[] args)
 		{
 			try
 			{
+			    bool verbose = false;
+			    foreach (string arg in args)
+			    {
+			        if (arg == "/verbose")
+			            verbose = true;
+			    }
 				runtime = new Runtime();
 				Environment globalEnvironment = new Environment();
 				string code = "(do ";
 				foreach (string line in LSharpCode)
+				{
 					code += "\n" + line;
+					if (verbose)
+					    Console.WriteLine("Evaluating " + line + "...");
+					object o = Runtime.EvalString(line, globalEnvironment);
+					Console.WriteLine(Printer.WriteToString(o));
+				}
 				code += ")";
-				object output = Runtime.Eval(Reader.Read(new System.IO.StringReader(code),ReadTable.DefaultReadTable()), globalEnvironment);
-				Console.WriteLine(Printer.WriteToString(output));
+				//object output = Runtime.Eval(Reader.Read(new System.IO.StringReader(code),ReadTable.DefaultReadTable()), globalEnvironment);
+				//Console.WriteLine(Printer.WriteToString(output));
 			}
 			catch (Exception e)
 			{

@@ -7,9 +7,9 @@ namespace LSharp
 	/// <summary>
 	/// the LSharp script that is compiled to an EXE/DLL
 	/// </summary>
-	public class ClassName43610125
+	public class ClassName1079914409
 	{
-		string[] LSharpCode = {"(reference \"System.Windows.Forms\")","(using \"System.Windows.forms\")","","(= top (new TopLoop))","(run top)"};
+		string[] LSharpCode = {"(= frm (new System.Windows.Forms.Form ))","(set_Size frm (new System.Drawing.Size 100 100))","(set_Name frm \"Form1\")","(set_TabIndex frm 1)","(showdialog frm)","(prl \"WTF Tester from L#!\")"};
 		LSharp.Runtime runtime;
 		//Environment globalEnvironment;
 				
@@ -17,19 +17,33 @@ namespace LSharp
 		public static void Main(string[] args)
 		{
 			AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(Resolver);
-			new ClassName43610125().Activate(args);
+			new ClassName1079914409().Activate(args);
 		}
 		
 		public void Activate(string[] args)
 		{
 			try
 			{
+			    bool verbose = false;
+			    foreach (string arg in args)
+			    {
+			        if (arg == "/verbose")
+			            verbose = true;
+			    }
 				runtime = new Runtime();
 				Environment globalEnvironment = new Environment();
 				string code = "(do ";
 				foreach (string line in LSharpCode)
-					code += "\n" + line;
+				{
+				    code += "\n" + line;
+				    if (verbose)
+				        Console.WriteLine("Adding " + line + "...");
+				    //object o = Runtime.EvalString(line);
+			        //Console.WriteLine(Printer.WriteToString(o));
+			    }
 				code += ")";
+				if (verbose)
+				    Console.WriteLine("Code:" + code);
 				object output = Runtime.Eval(Reader.Read(new System.IO.StringReader(code),ReadTable.DefaultReadTable()), globalEnvironment);
 				Console.WriteLine(Printer.WriteToString(output));
 			}

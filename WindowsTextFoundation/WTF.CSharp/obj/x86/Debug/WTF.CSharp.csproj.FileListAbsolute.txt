@@ -1,0 +1,10 @@
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\bin\Debug\sample.cs
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\bin\Debug\Sample.wtf
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\bin\Debug\WTF.CSharp.exe.config
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\bin\Debug\WTF.CSharp.exe
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\bin\Debug\WTF.CSharp.pdb
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\bin\Debug\WTF.Core.dll
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\bin\Debug\WTF.Core.pdb
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\obj\x86\Debug\WTF.CSharp.exe
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.CSharp\obj\x86\Debug\WTF.CSharp.pdb

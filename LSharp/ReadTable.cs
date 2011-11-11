@@ -75,6 +75,9 @@ namespace LSharp
 			readTable.SetDispatchCharacter('|',new ReaderMacro(Reader.MultiLineCommentReader));
 			readTable.SetDispatchCharacter('\\',new ReaderMacro(Reader.CharacterReader));
 
+			readTable.SetMacroCharacter('~', new ReaderMacro(Reader.AssemblyDefinitionReader));
+			// example: ~namespace=LSharp.ExampleClass1~
+			
 			return readTable;
 		}
 	}

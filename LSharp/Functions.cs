@@ -1140,7 +1140,7 @@ namespace LSharp
                 {
                     // create $(SDKPath) and replace it with the path
                     // Set to the .NET Framework 4 Path.
-                    string SDKPath = "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\";
+                    string SDKPath = Path.GetDirectoryName(typeof(System.Int32).Assembly.Location) + "\\";
                     string newPath = ((string) module).Replace("$(SDKPath)", SDKPath);
                     result = AssemblyCache.Instance().LoadAssembly(newPath);
                 }

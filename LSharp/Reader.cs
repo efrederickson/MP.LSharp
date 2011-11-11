@@ -26,265 +26,316 @@ using System.Globalization;
 
 namespace LSharp
 {
-	/// <summary>
-	/// Reads arbitrary LSharp objects from textual descriptions
-	/// </summary>
-	public class Reader
-	{
-		
-		public static Object DispatchReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
+    /// <summary>
+    /// Reads arbitrary LSharp objects from textual descriptions
+    /// </summary>
+    public class Reader
+    {
+        
+        public static Object DispatchReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
 
-			int c = textReader.Read();
+            int c = textReader.Read();
             
-			Object f = readTable.GetDispatchCharacter(c);
+            Object f = readTable.GetDispatchCharacter(c);
 
-			if (f != null) 
-			{
-				return ((ReaderMacro) f)(textReader, readTable);
-			} 
-			else
-				return AtomReader(c, textReader);
-		}
+            if (f != null)
+            {
+                return ((ReaderMacro) f)(textReader, readTable);
+            }
+            else
+                return AtomReader(c, textReader);
+        }
 
-		public static Object MultiLineCommentReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
+        public static Object MultiLineCommentReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
 
-			int c;
+            int c;
 
-			do
-			{
-				do 
-				{
-					c = textReader.Read();
-				} while (c != -1 && c != '|' );
+            do
+            {
+                do
+                {
+                    c = textReader.Read();
+                } while (c != -1 && c != '|' );
 
-				c = textReader.Read();
-			} while (c != -1 & c != '#');
+                c = textReader.Read();
+            } while (c != -1 & c != '#');
 
-			return Read(textReader, readTable, null);
+            return Read(textReader, readTable, null);
 
-		}
+        }
 
-		public static Object CharacterReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
+        public static Object CharacterReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
 
-			int c;
+            int c;
 
-			c = textReader.Read();
-			
-			return (char) c;
+            c = textReader.Read();
+            
+            return (char) c;
 
-		}
+        }
 
-		public static Object LineCommentReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
+        public static Object LineCommentReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
 
-			int c;
+            int c;
 
-			do 
-			{
-				c = textReader.Read();
-			} while (c != -1 && c != '\n' && c != '\r');
+            do
+            {
+                c = textReader.Read();
+            } while (c != -1 && c != '\n' && c != '\r');
 
-			return Read(textReader, readTable, null);
-		}
+            return Read(textReader, readTable, null);
+        }
 
-		public static Object QuoteReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
+        public static Object QuoteReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
 
-			return new Cons(Symbol.FromName("quote"), new Cons(Read(textReader, readTable, null),null));
-		}
+            return new Cons(Symbol.FromName("quote"), new Cons(Read(textReader, readTable, null),null));
+        }
 
-		public static Object BackQuoteReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
+        public static Object BackQuoteReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
 
-			return new Cons(Symbol.FromName("backquote"), new Cons(Read(textReader, readTable, null),null));
-		}
+            return new Cons(Symbol.FromName("backquote"), new Cons(Read(textReader, readTable, null),null));
+        }
 
-		public static Object UnQuoteReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
+        public static Object UnQuoteReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
 
-			if (textReader.Peek() == '@') 
-			{
-				textReader.Read();
-				return new Cons(Symbol.FromName("splice"), new Cons(Read(textReader, readTable, null),null));
-			}
-			return new Cons(Symbol.FromName("unquote"), new Cons(Read(textReader, readTable, null),null));
-		}
+            if (textReader.Peek() == '@')
+            {
+                textReader.Read();
+                return new Cons(Symbol.FromName("splice"), new Cons(Read(textReader, readTable, null),null));
+            }
+            return new Cons(Symbol.FromName("unquote"), new Cons(Read(textReader, readTable, null),null));
+        }
 
-		public static Object LParReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			ReadTable readTable = (ReadTable) args[1];
-			int c;
+        public static Object LParReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
+            int c;
 
-						
-			while (Char.IsWhiteSpace((Char)textReader.Peek()))
-			{
-				c = textReader.Read();
-			}
+            
+            while (Char.IsWhiteSpace((Char)textReader.Peek()))
+            {
+                c = textReader.Read();
+            }
 
-			object o = Read(textReader, readTable, null);
-			if (o != Symbol.FromName(")"))
-				return new Cons(o, LParReader(textReader, readTable));
+            object o = Read(textReader, readTable, null);
+            if (o != Symbol.FromName(")"))
+                return new Cons(o, LParReader(textReader, readTable));
 
-			return null;
+            return null;
 
-		}
+        }
 
-		private static bool TerminatingCharP(char c) 
-		{
+        private static bool TerminatingCharP(char c)
+        {
 
-			bool b = (Char.IsWhiteSpace(c) || c == '\"' || c == ')' || c=='(' );
-			return b;
-		}
+            bool b = (Char.IsWhiteSpace(c) || c == '\"' || c == ')' || c=='(' );
+            return b;
+        }
 
-		public static Object AtomReader(int c, TextReader textReader)
-		{
-			if (((Char) c) == ')') 
-			{
-				return Symbol.FromName(")");
-			}
+        public static Object AtomReader(int c, TextReader textReader)
+        {
+            if (((Char) c) == ')')
+            {
+                return Symbol.FromName(")");
+            }
 
-			StringBuilder stringBuilder = new StringBuilder();
-			stringBuilder.Append((char)c);
-			bool done = false;
-			
-			do 
-			{
-				int nextChar = textReader.Peek();
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append((char)c);
+            bool done = false;
+            
+            do
+            {
+                int nextChar = textReader.Peek();
 
-				
-				if ((nextChar == -1) || (TerminatingCharP((Char)nextChar)))
-					done = true;
-				else 
-				{
-					c = textReader.Read();
-					stringBuilder.Append((char) c);
-				}
+                
+                if ((nextChar == -1) || (TerminatingCharP((Char)nextChar)))
+                    done = true;
+                else
+                {
+                    c = textReader.Read();
+                    stringBuilder.Append((char) c);
+                }
 
-			} while (!done);
+            } while (!done);
 
-			string token = stringBuilder.ToString();
-			
-			
-			Double d;
+            string token = stringBuilder.ToString();
+            Double d;
 
-			// Try reading the number as an integer
-			if (Double.TryParse(token,System.Globalization.NumberStyles.Integer,NumberFormatInfo.InvariantInfo,out d)) 
-			{
-				return (int)d;
-			} 
+            // Try reading the number as an integer
+            if (Double.TryParse(token,System.Globalization.NumberStyles.Integer,NumberFormatInfo.InvariantInfo,out d))
+            {
+                return (int)d;
+            }
 
-			// Try reading the number as a double
-			if (Double.TryParse(token,System.Globalization.NumberStyles.Any,NumberFormatInfo.InvariantInfo,out d)) 
-			{
-				return d;
-			} 
-			else 
-			{
-				return Symbol.FromName(token);
-			}
-		}
+            // Try reading the number as a double
+            if (Double.TryParse(token,System.Globalization.NumberStyles.Any,NumberFormatInfo.InvariantInfo,out d))
+            {
+                return d;
+            }
+            else
+            {
+                return Symbol.FromName(token);
+            }
+        }
 
-		public static Object StringReader(params Object[] args)
-		{
-			TextReader textReader = (TextReader) args[0];
-			StringBuilder stringBuilder = new StringBuilder();
-			bool done = false;
-			int c;
+        public static Object StringReader(params Object[] args)
+        {
+            TextReader textReader = (TextReader) args[0];
+            StringBuilder stringBuilder = new StringBuilder();
+            bool done = false;
+            int c;
+            
+            do
+            {
+                c = textReader.Read();
+                
+                if (c == -1) throw new Exception("EOF Reached");
 
-			do 
-			{
-				c = textReader.Read();
-		
-				if (c == -1) throw new Exception("EOF Reached");
+                if (c == '\"') done = true;
 
-				if (c == '\"') done = true;
+                if(c == '\\')	//escape
+                {
+                    c = textReader.Read();
+                    if(c == -1)
+                    {
+                        throw new Exception("Read error - eof found before matching: \"");
+                    }
+                    switch(c)
+                    {
+                        case 't':
+                            c = '\t';
+                            break;
+                        case 'r':
+                            c = '\r';
+                            break;
+                        case 'n':
+                            c = '\n';
+                            break;
+                        case '\\':
+                            break;
+                        case '"':
+                            break;
+                        default:
+                            throw new Exception("Unsupported escape character: \\" + (Char)c);
+                    }
+                }
 
-				if(c == '\\')	//escape
-				{
-					c = textReader.Read();
-					if(c == -1)
-					{
-						throw new Exception("Read error - eof found before matching: \"");
-					}
-					switch(c)
-					{
-						case 't':
-							c = '\t';
-							break;
-						case 'r':
-							c = '\r';
-							break;
-						case 'n':
-							c = '\n';
-							break;
-						case '\\':
-							break;
-						case '"':
-							break;
-						default:
-							throw new Exception("Unsupported escape character: \\" + (Char)c);
-					}
-				}
+                if (!done)
+                    stringBuilder.Append((char) c);
 
-				if (!done)
-					stringBuilder.Append((char) c);
-
-			} while (!done);
+            } while (!done);
 
 
-			return stringBuilder.ToString();
-		}
+            return stringBuilder.ToString();
+        }
 
-		public static Object Read(TextReader textReader, ReadTable readTable) 
-		{
-			return Read(textReader, readTable, null);
-		}
+        public static Object Read(TextReader textReader, ReadTable readTable)
+        {
+            return Read(textReader, readTable, null);
+        }
 
-		public static Object Read(TextReader textReader, ReadTable readTable, object eofValue) 
-		{
-			int c = textReader.Read();
+        public static Object Read(TextReader textReader, ReadTable readTable, object eofValue)
+        {
+            int c = textReader.Read();
 
+            while (Char.IsWhiteSpace((Char)c))
+            {
+                c = textReader.Read();
+            }
 
-			while (Char.IsWhiteSpace((Char)c)) 
-			{
-				c = textReader.Read();
-			}
+            if (c == -1)
+            {
+                // End of file
+                return eofValue;
+            }
 
-			if (c == -1) 
-			{
-				// End of file
-				return eofValue;
-			}
+            Object f = readTable.GetMacroCharacter(c);
 
-			Object f = readTable.GetMacroCharacter(c);
-
-			if (f != null) 
-			{
-				return ((ReaderMacro) f)(textReader, readTable);
-			} 
-			else 
-			{
-				return AtomReader(c, textReader);
-			}
-		}
-		
-	}
+            if (f != null)
+            {
+                return ((ReaderMacro) f)(textReader, readTable);
+            }
+            else
+            {
+                return AtomReader(c, textReader);
+            }
+        }
+        
+        public static Object AssemblyDefinitionReader(params Object[] args)
+        {
+            // define variables
+            TextReader textReader = (TextReader) args[0];
+            ReadTable readTable = (ReadTable) args[1];
+            AssemblyDefintion AD = new AssemblyDefintion(DefinitionType.None, null); // empty, to be filled
+            string insides=string.Empty;
+            
+            // read to end of marking
+            while (true)
+            {
+                int c = textReader.Read();
+                if (c == '~')
+                {
+                    break;
+                }
+                else
+                {
+                    insides += (char) c;
+                }
+            }
+            
+            // check "insides" of marking
+            if (insides.Contains("=")) // its a declaration
+            {
+                string[] _ad = insides.Split(new string[] {"="}, StringSplitOptions.None);
+                string type = _ad[0];
+                type = type.ToLower().Trim();
+                // not case sensitive
+                if (type == "namespace")
+                {
+                    AD.Type = DefinitionType.Namespace;
+                }
+                else if (type == "class")
+                {
+                    AD.Type = DefinitionType.Class;
+                }
+                AD.value = _ad[1].Trim();
+                if (char.IsLetter(AD.value.Substring(0, 1).ToCharArray()[0]))
+                {    // thats not a problem.
+                } else {
+                    throw new Exception("Invalid character '" + AD.value.Substring(0, 1) + "'!");
+                }
+            } else { // it ends something
+                insides = insides.ToLower();
+                if (insides == "end namespace")
+                    AD.Type = DefinitionType.EndNamespace;
+                else if (insides == "end class")
+                    AD.Type = DefinitionType.EndClass;
+                else // dont know what it is at all... throw an error
+                    throw new Exception("Unknown assembly marking '" + insides + "'!");
+            }
+            return new Cons(AD, new Cons(Read(textReader, readTable, null),null));
+        }
+    }
 }

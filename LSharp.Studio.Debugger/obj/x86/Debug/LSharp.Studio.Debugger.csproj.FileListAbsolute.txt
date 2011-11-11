@@ -34,3 +34,5 @@ C:\Elijah - Libraries\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\GenerateResour
 C:\Elijah - Libraries\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Elijah - Libraries\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\LSharp.Studio.Debugger.dll
 C:\Elijah - Libraries\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\LSharp.Studio.Debugger.pdb
+C:\Elijah - Libraries\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\GenerateResource.read.0.tlog
+C:\Elijah - Libraries\LSharp\LSharp.Studio.Debugger\obj\x86\Debug\GenerateResource.write.0.tlog

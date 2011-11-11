@@ -27,34 +27,34 @@ using System.Text;
 
 namespace LSharp
 {
-	/// <summary>
-	/// Allows LSharp programs to be executed
-	/// </summary>
-	public class Runtime
-	{
-		private static IProfiler profiler = new DefaultProfiler();
+    /// <summary>
+    /// Allows LSharp programs to be executed
+    /// </summary>
+    public class Runtime
+    {
+        private static IProfiler profiler = new DefaultProfiler();
 
-		/// <summary>
-		/// Maps eval to a list of expressions
-		/// </summary>
-		/// <param name="list"></param>
-		/// <param name="environment"></param>
-		/// <returns></returns>
-		public static Cons EvalList(object list, Environment environment) 
-		{
-			if (list == null)
-				return null;
+        /// <summary>
+        /// Maps eval to a list of expressions
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="environment"></param>
+        /// <returns></returns>
+        public static Cons EvalList(object list, Environment environment)
+        {
+            if (list == null)
+                return null;
 
-			object result = null;
+            object result = null;
 
-			foreach (object item in (Cons)list ) 
-			{
-				result = new Cons(Eval(item,environment) ,result);
-			}
+            foreach (object item in (Cons)list )
+            {
+                result = new Cons(Eval(item,environment) ,result);
+            }
 
-			return  ((Cons)result).Reverse();
+            return  ((Cons)result).Reverse();
 
-		}
+        }
 
         /// <summary>
         /// Evaluates an expression in a given lexical environment
@@ -72,6 +72,13 @@ namespace LSharp
             // The expression is either an atom or a list
             if (Primitives.IsAtom(expression))
             {
+                // Assembly marking (Compiler use, ignore)
+                if (expression.GetType() == typeof(AssemblyDefintion))
+                {
+                    Console.WriteLine("AssemblyDefinition, used in compiler.");
+                    return profiler.TraceReturn(expression);
+                }
+                
                 // Number
                 if (expression.GetType() == typeof(Double))
                     return profiler.TraceReturn(expression);
@@ -124,7 +131,12 @@ namespace LSharp
                 {
                     // if the first arg is a Cons, try to evaluate it to a function
                     function = Eval(cons.First(), environment);
-                }
+                }/*
+                else if (cons.First() is AssemblyDefintion)
+                {
+                    Console.WriteLine("AssemblyDefinition found. Type: " + ((AssemblyDefintion) cons.First()).Type.ToString() + ". Value: " + ((AssemblyDefintion) cons.First()).value);
+                    function = Eval(cons.Rest(), environment);
+                }*/
                 else if (cons.First() is Symbol)
                 {
                     // See if there is a binding to a function, clsoure, macro or special form
@@ -141,29 +153,35 @@ namespace LSharp
                 }
                 else
                 {
-                    string msg = "Expected a function as the first argument in a list but received type '";
-                    msg += cons.First().GetType().ToString() + "'";
-                    throw new System.ArgumentException(msg);
+                    if (cons.First() is AssemblyDefintion)
+                    { // ignore
+                    } else {
+                        string msg = "Expected a function as the first argument in a list but received type '";
+                        msg += cons.First().GetType().ToString() + "'";
+                        throw new System.ArgumentException(msg);
+                    }
                 }
-
-                // If it's a special form
-                if (function.GetType() == typeof(SpecialForm))
+                
+                if (function != null)
                 {
-                    return profiler.TraceReturn(((SpecialForm)function)((Cons)cons.Cdr(), environment));
+                    // If it's a special form
+                    if (function.GetType() == typeof(SpecialForm))
+                    {
+                        return profiler.TraceReturn(((SpecialForm)function)((Cons)cons.Cdr(), environment));
+                    }
+                    
+                    // If its a macro application
+                    if (function.GetType() == typeof(Macro))
+                    {
+                        object expansion = ((Macro)function).Expand((Cons)cons.Cdr());
+                        return profiler.TraceReturn(Runtime.Eval(expansion, environment));
+                    }
+                    // It must be a function, closure or method invocation,
+                    // so call apply
+                    Object arguments = EvalList((Cons)cons.Cdr(), environment);
+                    return profiler.TraceReturn(Runtime.Apply(function, arguments, environment));
                 }
-
-                // If its a macro application
-                if (function.GetType() == typeof(Macro))
-                {
-                    object expansion = ((Macro)function).Expand((Cons)cons.Cdr());
-                    return profiler.TraceReturn(Runtime.Eval(expansion, environment));
-                }
-
-                // It must be a function, closure or method invocation,
-                // so call apply
-                Object arguments = EvalList((Cons)cons.Cdr(), environment);
-                return profiler.TraceReturn(Runtime.Apply(function, arguments, environment));
-
+                return null;
             }
         }
 
@@ -206,213 +224,216 @@ namespace LSharp
             return constructorInfo;
         }
 
-		/// <summary>
-		/// Makes a new instance of type type by calling the
-		/// appropriate constructor, passing the given arguments
-		/// </summary>
-		/// <param name="type">The type of object to create</param>
-		/// <param name="arguments">the arguments to the constructor</param>
-		/// <returns></returns>
-		public static object MakeInstance(Type type, object arguments) 
-		{
-			Type[] types = new Type[0];
-			object[] values = new object[0];
-			if (arguments != null) 
-			{
-				types = new Type[((Cons)arguments).Length()];
-				values = new object[((Cons)arguments).Length()];
-				int loop = 0;
-				foreach (object argument in (Cons)arguments) 
-				{
+        /// <summary>
+        /// Makes a new instance of type type by calling the
+        /// appropriate constructor, passing the given arguments
+        /// </summary>
+        /// <param name="type">The type of object to create</param>
+        /// <param name="arguments">the arguments to the constructor</param>
+        /// <returns></returns>
+        public static object MakeInstance(Type type, object arguments)
+        {
+            Type[] types = new Type[0];
+            object[] values = new object[0];
+            if (arguments != null)
+            {
+                types = new Type[((Cons)arguments).Length()];
+                values = new object[((Cons)arguments).Length()];
+                int loop = 0;
+                foreach (object argument in (Cons)arguments)
+                {
                     if (argument == null)
                         types[loop] = typeof(System.Object);
                     else
-					    types[loop] = argument.GetType();
-					values[loop] = argument;
-					loop++;
-				}
-			}
-			
-			//ConstructorInfo constructorInfo = type.GetConstructor(types);
+                        types[loop] = argument.GetType();
+                    values[loop] = argument;
+                    loop++;
+                }
+            }
+            
+            //ConstructorInfo constructorInfo = type.GetConstructor(types);
 
             ConstructorInfo constructorInfo = GetConstructor(type, types, values);
 
-  
-			if (constructorInfo == null) 
+            
+            if (constructorInfo == null)
                 // TODO: Look for other potential constructors where null can match any type
-				throw new LSharpException(string.Format("No such constructor for '{0}'",type));
+                throw new LSharpException(string.Format("No such constructor for '{0}'",type));
 
-			return constructorInfo.Invoke(values);
-		}
+            return constructorInfo.Invoke(values);
+        }
 
-		/// <summary>
-		/// Calls a .NET method.
-		/// The first argument is the object to which the method is attached.
-		/// Passes the rest of the arguments to the appropriate constructor
-		/// </summary>
-		/// <param name="method"></param>
-		/// <param name="arguments"></param>
-		/// <returns></returns>
-		public static object Call(String method, Cons arguments) 
-		{
-			BindingFlags bindingFlags = BindingFlags.IgnoreCase  
-				| BindingFlags.Public 
-				| BindingFlags.NonPublic; 
+        /// <summary>
+        /// Calls a .NET method.
+        /// The first argument is the object to which the method is attached.
+        /// Passes the rest of the arguments to the appropriate constructor
+        /// </summary>
+        /// <param name="method"></param>
+        /// <param name="arguments"></param>
+        /// <returns></returns>
+        public static object Call(String method, Cons arguments)
+        {
+            if (method == null)
+                throw new ArgumentNullException("method");
+            else if (arguments == null)
+                throw new ArgumentNullException("arguments");
+            
+            BindingFlags bindingFlags = BindingFlags.IgnoreCase
+                | BindingFlags.Public
+                | BindingFlags.NonPublic;
 
-			// Is it a method on a static type or an object instance ?
-			Type type;
-			if (arguments.First().GetType() == typeof(LSharp.Symbol)) 
-			{
-				bindingFlags = bindingFlags | BindingFlags.Static | BindingFlags.FlattenHierarchy;
-				// Find the type object from its name
-				type = TypeCache.Instance().FindType(arguments.First().ToString());
-			}
-			else 
-			{
-				bindingFlags = bindingFlags | BindingFlags.Instance;
-				type = arguments.First().GetType();
-			}
+            // Is it a method on a static type or an object instance ?
+            Type type;
+            if (arguments.First().GetType() == typeof(LSharp.Symbol))
+            {
+                bindingFlags = bindingFlags | BindingFlags.Static | BindingFlags.FlattenHierarchy;
+                // Find the type object from its name
+                type = TypeCache.Instance().FindType(arguments.First().ToString());
+            }
+            else
+            {
+                bindingFlags = bindingFlags | BindingFlags.Instance;
+                type = arguments.First().GetType();
+            }
 
-			Type[] types = new Type[arguments.Length() -1];
-			object[] parameters = new object[arguments.Length() -1];
-			int loop = 0;
-			if (arguments.Rest() != null)
-				foreach (object argument in (Cons)arguments.Rest()) 
-				{
-					types[loop] = argument.GetType();
-					parameters[loop] = argument;
-					loop++;
-				}
+            Type[] types = new Type[arguments.Length() -1];
+            object[] parameters = new object[arguments.Length() -1];
+            int loop = 0;
+            if (arguments.Rest() != null)
+                foreach (object argument in (Cons)arguments.Rest())
+            {
+                types[loop] = argument.GetType();
+                parameters[loop] = argument;
+                loop++;
+            }
 
-			// Start by looking for a method call
-			MethodInfo m = type.GetMethod(method.ToString(), 
-						bindingFlags | BindingFlags.InvokeMethod
-						,null,types,null);
-			if (m != null)
-				return m.Invoke(arguments.First(),parameters);
+            // Start by looking for a method call
+            MethodInfo m = type.GetMethod(method.ToString(),
+                                          bindingFlags | BindingFlags.InvokeMethod
+                                          ,null,types,null);
+            if (m != null)
+                return m.Invoke(arguments.First(),parameters);
 
-			// Now loook for a property get
-			PropertyInfo p = type.GetProperty(method.ToString(),bindingFlags | BindingFlags.GetProperty,
-				null,null, types,null);
-			if (p != null)
-				return p.GetGetMethod().Invoke(arguments.First(),parameters);
+            // Now loook for a property get
+            PropertyInfo p = type.GetProperty(method.ToString(),bindingFlags | BindingFlags.GetProperty,
+                                              null,null, types,null);
+            if (p != null)
+                return p.GetGetMethod().Invoke(arguments.First(),parameters);
 
-			// Now look for a field get
-			FieldInfo f = type.GetField(method.ToString(),bindingFlags | BindingFlags.GetField);
-			if (f != null)
-				return f.GetValue(arguments.First());
-			
+            // Now look for a field get
+            FieldInfo f = type.GetField(method.ToString(),bindingFlags | BindingFlags.GetField);
+            if (f != null)
+                return f.GetValue(arguments.First());
+            
 
-			// FIXME: or an event ?
-			EventInfo e  = type.GetEvent(method.ToString(), bindingFlags); // | BindingFlags.Event)
-			if (e != null) // attempt to call the click event
-			    return e.GetRaiseMethod().Invoke(arguments.First(), parameters);
-			
-			throw new LSharpException(string.Format("Call: No such method, property, field, or event '{0}' on '{1}'", method.ToString(),type));
+            // FIXME: or an event ?
+            EventInfo e  = type.GetEvent(method.ToString(), bindingFlags); // | BindingFlags.Event)
+            if (e != null) // attempt to call the click event
+                return e.GetRaiseMethod().Invoke(arguments.First(), parameters);
+            
+            throw new LSharpException(string.Format("Call: No such method, property, field, or event '{0}' on '{1}'", method.ToString(),type));
+        }
 
-			
-		}
+        /// <summary>
+        /// Applies a function to its arguments. The function can be a built in L Sharp function,
+        /// a closure or a .net method
+        /// </summary>
+        /// <param name="function"></param>
+        /// <param name="arguments"></param>
+        /// <param name="environment"></param>
+        /// <returns></returns>
+        public static object Apply (object function, object arguments, Environment environment)
+        {
+            
+            if (function.GetType() == typeof(Function))
+            {
+                return ((Function) function) ((Cons)arguments,environment);
+            }
 
-		/// <summary>
-		/// Applies a function to its arguments. The function can be a built in L Sharp function,
-		/// a closure or a .net method
-		/// </summary>
-		/// <param name="function"></param>
-		/// <param name="arguments"></param>
-		/// <param name="environment"></param>
-		/// <returns></returns>
-		public static object Apply (object function, object arguments, Environment environment) 
-		{
-            				
-			if (function.GetType() == typeof(Function)) 
-			{
-				return ((Function) function) ((Cons)arguments,environment);
-			}
-
-			// If function is an LSharp Closure, then invoke it
-			if (function.GetType() == typeof(Closure)) 
-			{
-				if (arguments == null)
-					return ((Closure)function).Invoke();
-				else
-					return ((Closure)function).Invoke((Cons)arguments);
-			} 
-			else 
-			{
-				// It must be a .net method call
-				return Call(function.ToString(),(Cons)arguments);
-			}
+            // If function is an LSharp Closure, then invoke it
+            if (function.GetType() == typeof(Closure))
+            {
+                if (arguments == null)
+                    return ((Closure)function).Invoke();
+                else
+                    return ((Closure)function).Invoke((Cons)arguments);
+            }
+            else
+            {
+                // It must be a .net method call
+                return Call(function.ToString(),(Cons)arguments);
+            }
 
 
-		}
+        }
 
-		public static object EvalString (string expression) 
-		{
-			return EvalString(expression, new Environment());
-		}
+        public static object EvalString (string expression)
+        {
+            return EvalString(expression, new Environment());
+        }
 
-		public static object EvalString (string expression, Environment environment) 
-		{
-			ReadTable readTable = (ReadTable) environment.GetValue(Symbol.FromName("*readtable*"));
-			object input = Reader.Read(new StringReader(expression), readTable);
-			object output = Runtime.Eval(input, environment);
+        public static object EvalString (string expression, Environment environment)
+        {
+            ReadTable readTable = (ReadTable) environment.GetValue(Symbol.FromName("*readtable*"));
+            object input = Reader.Read(new StringReader(expression), readTable);
+            object output = Runtime.Eval(input, environment);
 
-			return output;	
-		}
+            return output;
+        }
 
-		public static IProfiler Profiler
-		{
-			get
-			{
-				return profiler;
-			}
-			set
-			{
-				profiler = value;
-			}
-		}
+        public static IProfiler Profiler
+        {
+            get
+            {
+                return profiler;
+            }
+            set
+            {
+                profiler = value;
+            }
+        }
 
-		public static object BackQuoteExpand(Object form, Environment environment) 
-		{
-			if (!(form is Cons))
-				return form;
+        public static object BackQuoteExpand(Object form, Environment environment)
+        {
+            if (!(form is Cons))
+                return form;
 
-			Cons expression = (Cons) form;
+            Cons expression = (Cons) form;
 
-			Cons result = null;
-			foreach (object item in expression) 
-			{
-				if (item is Cons) 
-				{
-					Cons list = (Cons)item;
-					if (list.First() == Symbol.BACKQUOTE) 
-					{
-						result = new Cons(BackQuoteExpand(list.Second(),environment), result);
-					}
-					else if (list.First() == Symbol.UNQUOTE) 
-					{
-						result = new Cons(Runtime.Eval(BackQuoteExpand(list.Second(),environment),environment), result);
-					}
-					else if (list.First() == Symbol.SPLICE) 
-					{
-						Cons l = (Cons)Runtime.Eval(BackQuoteExpand(list.Second(),environment),environment);
-						foreach(object o in l) 
-						{
-							result = new Cons(o, result);
-						}
-					}
-					else 
-					{
-						result = new Cons(BackQuoteExpand(item,environment), result);
-					}
+            Cons result = null;
+            foreach (object item in expression)
+            {
+                if (item is Cons)
+                {
+                    Cons list = (Cons)item;
+                    if (list.First() == Symbol.BACKQUOTE)
+                    {
+                        result = new Cons(BackQuoteExpand(list.Second(),environment), result);
+                    }
+                    else if (list.First() == Symbol.UNQUOTE)
+                    {
+                        result = new Cons(Runtime.Eval(BackQuoteExpand(list.Second(),environment),environment), result);
+                    }
+                    else if (list.First() == Symbol.SPLICE)
+                    {
+                        Cons l = (Cons)Runtime.Eval(BackQuoteExpand(list.Second(),environment),environment);
+                        foreach(object o in l)
+                        {
+                            result = new Cons(o, result);
+                        }
+                    }
+                    else
+                    {
+                        result = new Cons(BackQuoteExpand(item,environment), result);
+                    }
 
-				} 
-				else 
-				{
-					result = new Cons(item, result);
-				}
-			}
-			return result.Reverse();
-		}
-	}
+                }
+                else
+                {
+                    result = new Cons(item, result);
+                }
+            }
+            return result.Reverse();
+        }
+    }
 }

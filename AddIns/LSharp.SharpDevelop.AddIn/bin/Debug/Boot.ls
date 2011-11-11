@@ -1,4 +1,5 @@
-﻿(reference "System.Windows.Forms")
+﻿~NAMESPACE = LSharp.BOOT~
+(reference "System.Windows.Forms")
 (reference "System.Drawing")
 (reference "System.Xml")
 (reference "LSharp.Libraries")

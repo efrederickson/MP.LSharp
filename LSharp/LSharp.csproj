@@ -114,9 +114,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\EventAdapter.cs" />
+    <Compile Include="Adapters\ThreadAdapter.cs" />
     <Compile Include="AssemblyCache.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AssemblyDefintion.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -148,7 +151,6 @@
     <Compile Include="Environment.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EventAdapter.cs" />
     <Compile Include="Function.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -203,7 +205,6 @@
     <Compile Include="Symbol.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ThreadAdapter.cs" />
     <Compile Include="TopLoop.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -231,7 +232,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Adapters" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
