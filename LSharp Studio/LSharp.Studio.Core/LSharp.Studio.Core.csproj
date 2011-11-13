@@ -113,7 +113,9 @@
     <Compile Include="Forms\OutputForm.Designer.cs">
       <DependentUpon>OutputForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SetDefaultProgramsForm.cs" />
+    <Compile Include="Forms\SetDefaultProgramsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\SetDefaultProgramsForm.Designer.cs">
       <DependentUpon>SetDefaultProgramsForm.cs</DependentUpon>
     </Compile>
@@ -153,10 +155,6 @@
     <ProjectReference Include="..\..\AddIns\LSharp.SharpDevelop.AddIn\LSharp.SharpDevelop.AddIn.csproj">
       <Project>{CD28FA75-8429-45DB-BF12-26751D278BC3}</Project>
       <Name>LSharp.SharpDevelop.AddIn</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ExpressionTreeVisualizer\ExpressionTreeVisualizer.csproj">
-      <Project>{97D88080-A3E3-4E05-82E7-7365B36C67EB}</Project>
-      <Name>ExpressionTreeVisualizer</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\LSharp.Interpreter\LSharp.Interpreter.csproj">
       <Project>{8141886D-307B-4030-9320-8821B859AF66}</Project>

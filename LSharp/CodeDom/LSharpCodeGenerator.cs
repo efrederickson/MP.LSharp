@@ -17,7 +17,7 @@ namespace LSharp.CodeDom
 			if (IsValidIdentifier(value))
 				return value;
 			else
-				return "*" + value + "*";
+				return "_" + value + "_";
 		}
 
 		protected override void GenerateArgumentReferenceExpression(System.CodeDom.CodeArgumentReferenceExpression e)
@@ -31,12 +31,11 @@ namespace LSharp.CodeDom
 		    foreach (CodeExpression cd in e.Initializers)
 		        this.Output.Write(cd.ToString() + " ");
 		    this.Output.WriteLine("))");
-            throw new NotImplementedException();
 		}
 
 		protected override void GenerateArrayIndexerExpression(System.CodeDom.CodeArrayIndexerExpression e)
 		{
-            throw new NotImplementedException();
+		    this.Output.WriteLine("(item " + e.TargetObject.ToString() + " " + e.Indices[0].ToString());
 		}
 
 		protected override void GenerateAssignStatement(System.CodeDom.CodeAssignStatement e)
@@ -46,7 +45,10 @@ namespace LSharp.CodeDom
 
 		protected override void GenerateAttachEventStatement(System.CodeDom.CodeAttachEventStatement e)
 		{
-            throw new NotImplementedException();
+		    this.Output.Write("(defevent " + e.Event.EventName + " " + e.Event.TargetObject + " ");
+		    this.Output.Write(e.Listener.ToString());
+		    this.Output.WriteLine(")");
+            //FIXME
 		}
 
 		protected override void GenerateAttributeDeclarationsEnd(System.CodeDom.CodeAttributeDeclarationCollection attributes)
@@ -117,7 +119,7 @@ namespace LSharp.CodeDom
 
 		protected override void GenerateEntryPointMethod(System.CodeDom.CodeEntryPointMethod e, System.CodeDom.CodeTypeDeclaration c)
 		{
-            throw new NotImplementedException();
+		    this.Output.WriteLine(";;; Entry point methods dont matter in L#");
 		}
 
 		protected override void GenerateEvent(System.CodeDom.CodeMemberEvent e, System.CodeDom.CodeTypeDeclaration c)

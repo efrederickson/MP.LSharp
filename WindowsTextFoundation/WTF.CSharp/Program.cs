@@ -29,7 +29,7 @@ public class WTFCSharp
 {
 public WTFCSharp()" + "\r\n{\r\n" +
                         wtf.Objects[0].ToCSharp() +
-@"frm.ShowDialog();" +  //FIXME
+@"frm.ShowDialog();" +  //FIXME: INJECT INTO C# CODE
 @"}
 }
 }";

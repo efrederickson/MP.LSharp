@@ -1,0 +1,13 @@
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Elijah - Libraries\LSharp\bin\Debug\reference.html
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.syn
+C:\Elijah - Libraries\LSharp\bin\Debug\docbook.css
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\ClearOutput.bmp
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\ToggleWordWrap.bmp
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Studio.WTFPlugin.dll
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Studio.WTFPlugin.pdb
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\LSharp.Studio.WTFPlugin.dll
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\LSharp.Studio.WTFPlugin.pdb
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\LSharp.Studio.WTFPlugin.Forms.CreateProjectForm.resources
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\GenerateResource.write.1.tlog

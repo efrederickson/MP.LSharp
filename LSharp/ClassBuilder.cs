@@ -97,7 +97,7 @@ namespace LSharp
 				throw new Exception("class creation error");
 			}
 
-			Object o = TypeCache.Instance().FindType(className);
+			Object o = TypeCache.FindType(className);
 			if (o != null)
 			{
 				Assembly a = Assembly.GetAssembly(o as Type);

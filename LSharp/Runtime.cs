@@ -288,7 +288,7 @@ namespace LSharp
             {
                 bindingFlags = bindingFlags | BindingFlags.Static | BindingFlags.FlattenHierarchy;
                 // Find the type object from its name
-                type = TypeCache.Instance().FindType(arguments.First().ToString());
+                type = TypeCache.FindType(arguments.First().ToString());
             }
             else
             {

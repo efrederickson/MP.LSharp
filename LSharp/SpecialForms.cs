@@ -439,7 +439,7 @@ namespace LSharp
 		/// <returns></returns>
 		public static Object The(Cons args, Environment environment) 
 		{
-			Type o = TypeCache.Instance().FindType(args.First().ToString());
+			Type o = TypeCache.FindType(args.First().ToString());
 			return Conversions.The (o, Runtime.Eval(args.Second(),environment));
 		}
 

@@ -256,7 +256,10 @@ public class PluginService
 		} else if (path.ToLower().StartsWith("help")) {
 			Parent.helpToolStripMenuItem2.GetCurrentParent().Items.Add(item);
 			return;
-		}
+	    } else if (path.ToLower().StartsWith("build")) {
+	        Parent.buildToolStripMenuItem.GetCurrentParent().Items.Add(item);
+	        return;
+	    }
 		Parent.pluginsToolStripMenuItem.GetCurrentParent().Items.Add(item);
 		return;
 	}

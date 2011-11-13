@@ -56,9 +56,7 @@ C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSha
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Forms.ViewEnvContentsForm.resources
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.MainForm.resources
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.Properties.Resources.resources
-C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.read.0.tlog
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.0.tlog
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.dll
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.pdb

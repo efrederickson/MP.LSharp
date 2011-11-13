@@ -97,5 +97,15 @@ namespace LSharp
 				Printer.WriteToString(argumentNames), 
 				Printer.WriteToString(body));
 		}
+
+        public Cons GetBody()
+        {
+            return body;
+        }
+
+        public Cons GetArgumentNames()
+        {
+            return argumentNames;
+        }
 	}
 }

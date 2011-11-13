@@ -17,7 +17,12 @@ namespace WindowsTextFoundation.Core.AST
     /// </summary>
     public class WTFObject
     {
-        public List<WTFProperty> Properties = new List<WTFProperty>();
+        public List<WTFProperty> properties = new List<WTFProperty>();
+        
+        public List<WTFProperty> Properties {
+            get { return properties; }
+            set { properties = value; }
+        }
         public string Name;
         public string Type;
         public List<string> ConstructorArgs;
@@ -44,7 +49,7 @@ namespace WindowsTextFoundation.Core.AST
                     sb.Append(", ");
             }
             sb.AppendLine(");");
-            foreach (WTFProperty p in this.Properties)
+            foreach (WTFProperty p in this.properties)
             {
                 sb.AppendLine(this.Name + "." + p.Name + " = " + CreateCSharpConstructor(p.Value) + ";");
             }
@@ -68,7 +73,7 @@ namespace WindowsTextFoundation.Core.AST
                 }
             }
             sb.AppendLine(")");
-            foreach (WTFProperty p in this.Properties)
+            foreach (WTFProperty p in this.properties)
             {
                 sb.AppendLine(this.Name + "." + p.Name + " = " + CreateVBConstructor(p.Value) + "");
             }
@@ -78,7 +83,7 @@ namespace WindowsTextFoundation.Core.AST
         public string ToLSharp()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(string.Format("(= {1} (new {0} ", this.Type.Trim(), this.Name.Trim()));
+            sb.Append(string.Format("(= {1} (new {0} ", this.Type, this.Name));
             if (this.ConstructorArgs.Count == 0)
                 sb.Append("\b");
             for(int i = 0; i < this.ConstructorArgs.Count; ++i)
@@ -91,11 +96,11 @@ namespace WindowsTextFoundation.Core.AST
                     sb.Append(" ");
             }
             sb.AppendLine("))");
-            foreach (WTFProperty p in this.Properties)
+            foreach (WTFProperty p in this.properties)
             {
                 sb.AppendLine("(set_" + p.Name + " " + this.Name + " " + CreateLSharpConstructor(p.Value) + ")");
             }
-            return sb.ToString();
+            return sb.ToString().Replace("", ""); ;
         }
         
         private string CreateCSharpConstructor(string wtfobj)

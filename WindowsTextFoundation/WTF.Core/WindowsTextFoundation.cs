@@ -65,7 +65,9 @@ namespace WindowsTextFoundation.Core
                 
                 // parse line
                 string line = sr.ReadLine();
-                if (line.ToUpper().StartsWith("BEGIN "))
+                if (line.StartsWith("--"))
+                    continue; // its a comment
+                else if (line.ToUpper().StartsWith("BEGIN "))
                 {
                     line = line.Substring("BEGIN ".Length).Trim();
                     while ((line.Substring(0, 1) != " "))
@@ -84,21 +86,21 @@ namespace WindowsTextFoundation.Core
                         name = line.Trim();
                         line = "";
                     }
-                    foreach (string arg in line.Split(new string[] {" "} , StringSplitOptions.RemoveEmptyEntries))
+                    foreach (string arg in line.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries))
                         constructorargs.Add(arg);
                     // create WTF Object
                     o = new AST.WTFObject(name, type, constructorargs);
-                    
+
                     // parse properties
                     line = sr.ReadLine();
                     while (line.ToUpper() != "ENDOBJECT")
                     {
                         // parse line into <Property Name> = <Value>;
                         line = line.Trim();
-                        string[] line2 = line.Split(new string[] {"="},
+                        string[] line2 = line.Split(new string[] { "=" },
                                                     StringSplitOptions.None);
-                        o.Properties.Add(new AST.WTFProperty(line2[0].Trim(), line2[1].Trim()));
-                        
+                        o.properties.Add(new AST.WTFProperty(line2[0].Trim(), line2[1].Trim()));
+
                         // read a line
                         line = sr.ReadLine();
                     }

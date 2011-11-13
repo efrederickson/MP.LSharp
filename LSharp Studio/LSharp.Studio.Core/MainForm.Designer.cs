@@ -454,7 +454,7 @@ namespace LSharp.Studio
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem showOutputToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem buildToolStripMenuItem;
+		internal System.Windows.Forms.ToolStripMenuItem buildToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem compileToolStripMenuItem;
 		internal System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 		internal System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;

@@ -5,22 +5,18 @@ using System.IO;
 namespace LSharp.CodeDom
 {
     /// <summary>
-    /// Summary description for LSharpCodeProvider.
+    /// Basic wrapper for LSharpCodeDom. Not yet finished
     /// </summary>
     public class LSharpCodeProvider : CodeDomProvider
     {
         public LSharpCodeProvider()
         {
-            //
-            // TODO: Add constructor logic here
-            //
         }
 
         public override ICodeCompiler CreateCompiler() 
         {
-            throw new NotImplementedException();
+            return new LSharpCodeCompiler();
         }
-
 
         public override ICodeGenerator CreateGenerator() 
         {

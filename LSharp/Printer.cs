@@ -24,81 +24,87 @@ using System.Text;
 
 namespace LSharp
 {
-	/// <summary>
-	/// Formats and prints LSharp objects
-	/// </summary>
-	public class Printer
-	{
-		public Printer()
-		{
+    /// <summary>
+    /// Formats and prints LSharp objects
+    /// </summary>
+    public class Printer
+    {
+        public Printer()
+        {
 
-		}
+        }
 
-		public static string WriteToString(Object x) 
-		{
+        public static string ConsToString(Object x)
+        {
+            string v = WriteToString(x);
+            return v.Substring(1, v.Length - 2);
+        }
 
-			if (x == null) 
-			{
-				return "null";
-			}
+        public static string WriteToString(Object x) 
+        {
 
-			Type type = x.GetType();
+            if (x == null) 
+            {
+                return "null";
+            }
 
-			if (type == typeof (string)) 
-			{
-				return string.Format("\"{0}\"",(string) x);
-			}
+            Type type = x.GetType();
 
-			if (type == typeof (char)) 
-			{
-				return string.Format("#\\{0}", x);
-			}
+            if (type == typeof (string)) 
+            {
+                return string.Format("\"{0}\"",(string) x);
+            }
 
-			if (type == typeof (Symbol)) 
-			{
-				return string.Format("{0}",((Symbol) x).ToString());
-			}
+            if (type == typeof (char)) 
+            {
+                return string.Format("#\\{0}", x);
+            }
 
-			if (type == typeof (Cons)) 
-			{
-				Cons cons = (Cons) x;
-				StringBuilder stringBuilder = new StringBuilder();
-				stringBuilder.Append("(");
-				stringBuilder.Append(WriteToString(cons.Car()));
-				stringBuilder.Append(" ");
-				Object o;
-				o = cons.Cdr();
-				while (o != null) 
-				{
-					if (o.GetType() == typeof (Cons)) 
-					{
-						cons = (Cons)o;
-						stringBuilder.Append(WriteToString(cons.Car()));
-						
-						o = cons.Cdr();
+            if (type == typeof (Symbol)) 
+            {
+                return string.Format("{0}",((Symbol) x).ToString());
+            }
 
-						if (o !=null)
-							stringBuilder.Append(" ");
-					} 
-					else 
-					{
-						stringBuilder.Append(". ");
-						stringBuilder.Append(WriteToString(o));
-						o = null;
-					}
-				}
-				stringBuilder.Append(")");
-				return stringBuilder.ToString();
-			}
+            if (type == typeof (Cons)) 
+            {
+                Cons cons = (Cons) x;
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.Append("(");
+                stringBuilder.Append(WriteToString(cons.Car()));
+                stringBuilder.Append(" ");
+                Object o;
+                o = cons.Cdr();
+                while (o != null) 
+                {
+                    if (o.GetType() == typeof (Cons)) 
+                    {
+                        cons = (Cons)o;
+                        stringBuilder.Append(WriteToString(cons.Car()));
+                        
+                        o = cons.Cdr();
 
-			return x.ToString().Trim();
-		}
+                        if (o !=null)
+                            stringBuilder.Append(" ");
+                    } 
+                    else 
+                    {
+                        stringBuilder.Append(". ");
+                        stringBuilder.Append(WriteToString(o));
+                        o = null;
+                    }
+                }
+                stringBuilder.Append(")");
+                return stringBuilder.ToString();
+            }
 
-		public static void Write(Object x) 
-		{
-			Console.WriteLine(WriteToString(x));
-		}
-			
-		
-	}
+            return x.ToString().Trim();
+        }
+
+        public static void Write(Object x) 
+        {
+            Console.WriteLine(WriteToString(x));
+        }
+            
+        
+    }
 }

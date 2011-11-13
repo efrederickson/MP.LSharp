@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using ICSharpCode.NRefactory.CSharp;
+//using Mono.CSharp;
 
 namespace LSharp.NRefactory
 {
@@ -427,7 +428,7 @@ namespace LSharp.NRefactory
             throw new NotImplementedException();
         }
         
-        public object VisitYieldStatement(YieldStatement yieldStatement, object data)
+        public object VisitYieldStatement(Mono.CSharp.YieldStatement<Mono.CSharp.StateMachineInitializer> yieldStatement, object data)
         {
             throw new NotImplementedException();
         }
@@ -568,6 +569,16 @@ namespace LSharp.NRefactory
         }
         
         public object VisitPatternPlaceholder(AstNode placeholder, ICSharpCode.NRefactory.PatternMatching.Pattern pattern, object data)
+        {
+            throw new NotImplementedException();
+        }
+        
+        public object VisitNamedExpression(NamedExpression namedExpression, object data)
+        {
+            throw new NotImplementedException();
+        }
+        
+        public object VisitYieldReturnStatement(YieldReturnStatement yieldReturnStatement, object data)
         {
             throw new NotImplementedException();
         }

@@ -6,3 +6,4 @@ C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.LSharp\obj\x86\Debug\WTF.
 C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.LSharp\obj\x86\Debug\WTF.LSharp.pdb
 C:\Elijah - Libraries\LSharp\bin\Debug\Sample.wtf
 C:\Elijah - Libraries\LSharp\bin\Debug\sample.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\MsgBox.ls

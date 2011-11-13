@@ -611,9 +611,8 @@ namespace LSharp
         {
             object obj = args.Second();
 
-            TypeCache typeCache = TypeCache.Instance();
             string typeName = args.First().ToString();
-            Type type = typeCache.FindType(typeName);
+            Type type = TypeCache.FindType(typeName);
 
             object result =  (((Type)type).IsInstanceOfType (obj));
 
@@ -999,7 +998,7 @@ namespace LSharp
         /// <returns></returns>
         public static Object New(Cons args, Environment environment)
         {
-            Type type = TypeCache.Instance().FindType(args.First().ToString());
+            Type type = TypeCache.FindType(args.First().ToString());
 
             return Runtime.MakeInstance(type,args.Rest());
         }
@@ -1159,7 +1158,7 @@ namespace LSharp
         public static Object Reset(Cons args, Environment environment)
         {
             environment.GlobalReset();
-            TypeCache.Instance().Clear();
+            TypeCache.Clear();
             return null;
         }
 
@@ -1214,7 +1213,7 @@ namespace LSharp
         /// <returns></returns>
         public static Object TypeOf(Cons args, Environment environment)
         {
-            Type type = TypeCache.Instance().FindType(args.First().ToString());
+            Type type = TypeCache.FindType(args.First().ToString());
 
             return (type);
         }
@@ -1233,7 +1232,7 @@ namespace LSharp
             {
                 if (name is String)
                 {
-                    TypeCache.Instance().Using((string)name);
+                    TypeCache.Using((string)name);
                     result = (string) name;
                 }
                 else

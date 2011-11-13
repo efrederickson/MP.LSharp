@@ -91,10 +91,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExpressionTreeVisualizer\ExpressionTreeVisualizer.csproj">
-      <Project>{97D88080-A3E3-4E05-82E7-7365B36C67EB}</Project>
-      <Name>ExpressionTreeVisualizer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LSharp.Interpreter\LSharp.Interpreter.csproj">
       <Project>{8141886D-307B-4030-9320-8821B859AF66}</Project>
       <Name>LSharp.Interpreter</Name>
