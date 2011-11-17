@@ -100,6 +100,8 @@ namespace WindowsTextFoundation.Core.AST
             {
                 sb.AppendLine("(set_" + p.Name + " " + this.Name + " " + CreateLSharpConstructor(p.Value) + ")");
             }
+            // This is not an excessive change. It is acutally a character
+            // that VS and SD do not display. Open in notepad if you dont believe me.
             return sb.ToString().Replace("", ""); ;
         }
         
