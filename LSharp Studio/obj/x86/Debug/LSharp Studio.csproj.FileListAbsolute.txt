@@ -100,3 +100,8 @@ C:\Elijah - Libraries\LSharp\bin\Debug\Samples\String.ls
 C:\Elijah - Libraries\LSharp\bin\Debug\Samples\try.ls
 C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Graphics.ls
 C:\Elijah - Libraries\LSharp\bin\Debug\Samples\Git.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Microsoft.Build.targets
+C:\Elijah - Libraries\LSharp\bin\Debug\Templates\ConsoleProject.xpt
+C:\Elijah - Libraries\LSharp\bin\Debug\Templates\Empty.xft
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\LS-Mode.xshd
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.SharpDevelop.AddIn.addin

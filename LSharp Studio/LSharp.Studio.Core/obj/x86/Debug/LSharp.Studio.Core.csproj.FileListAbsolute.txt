@@ -60,3 +60,4 @@ C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\Gene
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.dll
 C:\Elijah - Libraries\LSharp\LSharp Studio\LSharp.Studio.Core\obj\x86\Debug\LSharp.Studio.Core.pdb
+C:\Elijah - Libraries\LSharp\bin\Debug\Sample.ls

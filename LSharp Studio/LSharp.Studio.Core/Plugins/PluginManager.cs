@@ -243,7 +243,8 @@ public class PluginService
 				return;
 			}
 			tmpitem.Visible = false;
-			Parent.MenuStrip.Items.Insert(Parent.MenuStrip.Items.IndexOfKey("INSERT"), toolstrip);
+			//Parent.MenuStrip.Items.Insert(Parent.MenuStrip.Items.IndexOfKey("INSERT"), toolstrip);
+                        Parent.MenuStrip.Items.Add(toolstrip);
 			//toolstrip.Owner = Parent.MenuStrip
 			tmpitem.GetCurrentParent().Items.Add(item);
 			return;
