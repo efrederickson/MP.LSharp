@@ -14,6 +14,7 @@ namespace LSharp.Studio.WTFPlugin.Forms
         public CreateProjectForm()
         {
             InitializeComponent();
+            projectOutDirTextBox.Text = LSharp.Studio.Core.Properties.Settings.Default.DefaultSaveLocation + "\\";
         }
         
         void CreateProjectForm_Load(object sender, EventArgs e)
@@ -34,17 +35,27 @@ namespace LSharp.Studio.WTFPlugin.Forms
         
         void Button1_Click(object sender, EventArgs e)
         {
+            if (!System.IO.Directory.Exists(projectOutDirTextBox.Text))
+                System.IO.Directory.CreateDirectory(projectOutDirTextBox.Text);
             if (listBox1.SelectedIndex == 0)
-                new LSharp.Studio.WTFPlugin.Projects.BasicProject().Create;
+                GlobalCurrentProject.Project = new LSharp.Studio.WTFPlugin.Projects.BasicProject().Create(projectOutDirTextBox.Text, projectNameTextBox.Text.ToLower().EndsWith(".lsproj") ? projectNameTextBox.Text : projectNameTextBox.Text + ".lsproj", projectNameTextBox.Text);
             if (listBox1.SelectedIndex == 1)
-                new LSharp.Studio.WTFPlugin.Projects.InstructionalProject().Create;
-            else
-                return;
+                GlobalCurrentProject.Project = new LSharp.Studio.WTFPlugin.Projects.InstructionalProject().Create(projectOutDirTextBox.Text, projectNameTextBox.Text.ToLower().EndsWith(".lsproj") ? projectNameTextBox.Text : projectNameTextBox.Text + ".lsproj", projectNameTextBox.Text);
+            GlobalCurrentProject.UpdateWindows();
+            Close();
         }
         
         void Button2_Click(object sender, EventArgs e)
         {
             Close();
         }
+        
+        void Button3_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog f = new FolderBrowserDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+                projectOutDirTextBox.Text = f.SelectedPath;
+        }
+        
     }
 }

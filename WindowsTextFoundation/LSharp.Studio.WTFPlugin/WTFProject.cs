@@ -8,9 +8,24 @@ namespace LSharp.Studio.WTFPlugin
 {
     public class WTFProject
     {
-        public string XmlFilename = "";
-        public List<string> Files = new List<string>();
-        public string OutputFileName="";
+        public string XmlFilename
+        {get; set; }
+        public string ProjectName
+        {get; set; }
+        private List<File> files = new List<File>();
+        public List<File> Files
+        {
+            get
+            {
+                return files;
+            }
+            set
+            {
+                files = value;
+            }
+        }
+        public string OutputFileName
+        {get; set; }
         public WindowsTextFoundation.LSharpProvider.Compiler.OutputType CompileOutputType = WindowsTextFoundation.LSharpProvider.Compiler.OutputType.Exe;
 
         public void Load(string filename)
@@ -18,8 +33,9 @@ namespace LSharp.Studio.WTFPlugin
             Files.Clear();
             XmlDocument doc = new XmlDocument();
             doc.Load(filename);
+            ProjectName = doc.SelectSingleNode("/project/projectname").InnerText;
             foreach (XmlNode n in doc.SelectNodes("/project/files/file"))
-                Files.Add(n.InnerText);
+                Files.Add(new File(n.InnerText, ProjectName + "\\" + System.IO.Path.GetFileName(n.InnerText)));
             OutputFileName = doc.SelectSingleNode("/project/outfile").InnerText;
             CompileOutputType =(WindowsTextFoundation.LSharpProvider.Compiler.OutputType) Enum.Parse(typeof(WindowsTextFoundation.LSharpProvider.Compiler.OutputType), doc.SelectSingleNode("/project/outputtype").InnerText);
         }
@@ -33,10 +49,11 @@ namespace LSharp.Studio.WTFPlugin
             XmlWriter writer = XmlWriter.Create(filename, s);
             writer.WriteStartElement("project");
             /******* FILES ********/
+            writer.WriteElementString("projectname", ProjectName);
             writer.WriteStartElement("files");
-            foreach (string filename2 in Files)
+            foreach (File filename2 in Files)
             {
-                writer.WriteElementString("file", filename2);
+                writer.WriteElementString("file", filename2.Path);
             }
             writer.WriteEndElement();
             /******* END FILES ******/
@@ -53,10 +70,10 @@ namespace LSharp.Studio.WTFPlugin
         public string GetLSharpSources()
         {
             string ret = "";
-            foreach (string fn in Files)
+            foreach (File fn in Files)
             {
-                if (fn.ToLower().EndsWith(".ls"))
-                    ret += System.IO.File.ReadAllText(fn);
+                if (fn.Path.ToLower().EndsWith(".ls"))
+                    ret += System.IO.File.ReadAllText(fn.Path);
             }
             return ret;
         }
@@ -64,10 +81,10 @@ namespace LSharp.Studio.WTFPlugin
         public string[] GetWTFFileNames()
         {
             List<string> wtfFiles = new List<string>();
-            foreach (string fn in Files)
+            foreach (File fn in Files)
             {
-                if (fn.ToLower().EndsWith(".wtf"))
-                    wtfFiles.Add(fn);
+                if (fn.Path.ToLower().EndsWith(".wtf"))
+                    wtfFiles.Add(fn.Path);
             }
             return wtfFiles.ToArray();
         }

@@ -11,12 +11,12 @@ namespace LSharp.Studio.WTFPlugin.Projects
         {get; }
         string Info
         { get; }
-        WTFProject Create(string outputDir, string projectFile);
+        WTFProject Create(string outputDir, string projectFile, string projectName);
     }
 
     class BasicProject : IProject
     {
-        public WTFProject Create(string outputDir, string projectFile)
+        public WTFProject Create(string outputDir, string projectFile, string projectName)
         {
             string wtfFileText = @"BEGIN System.Windows.Forms.Form MainForm
     Text = ""MainForm""
@@ -28,10 +28,11 @@ ENDOBJECT
             System.IO.File.WriteAllText(outputDir + "\\MainForm.wtf", wtfFileText);
             System.IO.File.WriteAllText(outputDir + "\\main.ls", lsFileText);
             WTFProject proj = new WTFProject();
-            proj.Files.Add(outputDir + "\\MainForm.wtf");
-            proj.Files.Add(outputDir + "\\main.ls");
+            proj.Files.Add(new File(outputDir + "\\MainForm.wtf", projectName + "\\MainForm.wtf"));
+            proj.Files.Add(new File(outputDir + "\\main.ls", projectName + "\\main.ls"));
             proj.CompileOutputType = WindowsTextFoundation.LSharpProvider.Compiler.OutputType.WinFormsExe;
             proj.XmlFilename = projectFile;
+            proj.ProjectName = projectName;
             proj.Save(projectFile);
             proj.Load(projectFile);
             return proj;
@@ -55,7 +56,7 @@ ENDOBJECT
             get { return "L# WTF Project Template with examples and instructional text"; }
         }
 
-        public WTFProject Create(string outputDir, string projectFile)
+        public WTFProject Create(string outputDir, string projectFile, string projectName)
         {
             string wtfFileText = @"BEGIN System.Windows.Forms.Form MainForm
     Text = ""MainForm""
@@ -78,10 +79,11 @@ ENDOBJECT
             System.IO.File.WriteAllText(outputDir + "\\MainForm.wtf", wtfFileText);
             System.IO.File.WriteAllText(outputDir + "\\main.ls", lsFileText);
             WTFProject proj = new WTFProject();
-            proj.Files.Add(outputDir + "\\MainForm.wtf");
-            proj.Files.Add(outputDir + "\\main.ls");
+            proj.Files.Add(new File(outputDir + "\\MainForm.wtf", projectName + "\\MainForm.wtf"));
+            proj.Files.Add(new File(outputDir + "\\main.ls", projectName + "\\main.ls"));
             proj.CompileOutputType = WindowsTextFoundation.LSharpProvider.Compiler.OutputType.Exe;
             proj.XmlFilename = projectFile;
+            proj.ProjectName = projectName;
             proj.Save(projectFile);
             proj.Load(projectFile);
             return proj;

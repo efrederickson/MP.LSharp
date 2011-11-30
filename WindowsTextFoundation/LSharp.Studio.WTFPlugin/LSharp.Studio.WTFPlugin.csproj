@@ -52,12 +52,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateProjectPlugin.cs" />
+    <Compile Include="File.cs" />
     <Compile Include="Forms\CreateProjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CreateProjectForm.Designer.cs">
       <DependentUpon>CreateProjectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProjectItemsForm.cs" />
+    <Compile Include="Forms\ProjectItemsForm.Designer.cs">
+      <DependentUpon>ProjectItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PropertiesForm.cs" />
+    <Compile Include="Forms\PropertiesForm.Designer.cs">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalCurrentProject.cs" />
     <Compile Include="IProject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WTFProject.cs" />
@@ -91,6 +101,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\CreateProjectForm.resx">
       <DependentUpon>CreateProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectItemsForm.resx">
+      <DependentUpon>ProjectItemsForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
