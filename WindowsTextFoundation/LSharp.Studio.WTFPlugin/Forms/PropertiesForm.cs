@@ -9,13 +9,14 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using WeifenLuo.WinFormsUI.Docking;
 
 namespace LSharp.Studio.WTFPlugin.Forms
 {
     /// <summary>
     /// Properties manipulator form
     /// </summary>
-    public partial class PropertiesForm : Form
+    public partial class PropertiesForm : DockContent
     {
         public PropertiesForm()
         {
@@ -31,7 +32,12 @@ namespace LSharp.Studio.WTFPlugin.Forms
         
         public void UpdateForm()
         {
-            
+            // ...
+        }
+        
+        public void SelectObject(object c)
+        {
+            propertyGrid1.SelectedObject = c;
         }
     }
 }

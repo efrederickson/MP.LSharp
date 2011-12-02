@@ -36,12 +36,33 @@ namespace LSharp.Studio.WTFPlugin.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.SuspendLayout();
+            // 
+            // propertyGrid1
+            // 
+            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(236, 239);
+            this.propertyGrid1.TabIndex = 0;
             // 
             // PropertiesForm
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "PropertiesForm";
+            this.ClientSize = new System.Drawing.Size(236, 239);
+            this.Controls.Add(this.propertyGrid1);
+            this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)(((((WeifenLuo.WinFormsUI.Docking.DockAreas.Float | WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft) 
+                                    | WeifenLuo.WinFormsUI.Docking.DockAreas.DockRight) 
+                                    | WeifenLuo.WinFormsUI.Docking.DockAreas.DockTop) 
+                                    | WeifenLuo.WinFormsUI.Docking.DockAreas.DockBottom)));
             this.Name = "PropertiesForm";
+            this.ShowHint = WeifenLuo.WinFormsUI.Docking.DockState.Float;
+            this.TabText = "PropertiesForm";
+            this.Text = "PropertiesForm";
+            this.ResumeLayout(false);
         }
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
     }
 }

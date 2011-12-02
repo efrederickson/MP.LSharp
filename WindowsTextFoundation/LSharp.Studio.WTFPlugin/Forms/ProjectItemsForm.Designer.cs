@@ -55,6 +55,8 @@ namespace LSharp.Studio.WTFPlugin.Forms
                                     treeNode2});
             this.treeView1.Size = new System.Drawing.Size(284, 262);
             this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
+            this.treeView1.DoubleClick += new System.EventHandler(this.TreeView1_DoubleClick);
             // 
             // ProjectItemsForm
             // 
@@ -62,7 +64,13 @@ namespace LSharp.Studio.WTFPlugin.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.treeView1);
+            this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)(((((WeifenLuo.WinFormsUI.Docking.DockAreas.Float | WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft) 
+                                    | WeifenLuo.WinFormsUI.Docking.DockAreas.DockRight) 
+                                    | WeifenLuo.WinFormsUI.Docking.DockAreas.DockTop) 
+                                    | WeifenLuo.WinFormsUI.Docking.DockAreas.DockBottom)));
             this.Name = "ProjectItemsForm";
+            this.ShowHint = WeifenLuo.WinFormsUI.Docking.DockState.Float;
+            this.TabText = "Project Items";
             this.Text = "Project Items";
             this.ResumeLayout(false);
         }

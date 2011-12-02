@@ -35,7 +35,6 @@ namespace LSharp.Studio.WTFPlugin.Forms
             foreach (File file in GlobalCurrentProject.Project.Files)
             {
                 TreeNode n = AddTreeNode(file.NodePath);
-                
             }
         }
         
@@ -73,6 +72,32 @@ namespace LSharp.Studio.WTFPlugin.Forms
                 }
             }
             return null;
+        }
+        
+        void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            try {
+                if (treeView1.SelectedNode != null)
+            {
+                if (((string) treeView1.SelectedNode.Tag).EndsWith(GlobalCurrentProject.Project.ProjectName))
+                {
+                    GlobalCurrentProject.SelectPropertyItem(-1);
+                }
+                else
+                    GlobalCurrentProject.SelectPropertyItem(treeView1.SelectedNode.Index);
+            }
+            } catch (Exception) {
+                
+            }
+            
+        }
+        
+        void TreeView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (treeView1.SelectedNode != null)
+            {
+                GlobalCurrentProject.OpenDocumentFromIndex(treeView1.SelectedNode.Index);
+            }
         }
     }
 }

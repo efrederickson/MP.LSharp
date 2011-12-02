@@ -30,17 +30,21 @@ namespace LSharp.Studio.WTFPlugin.Forms
             if (listBox1.SelectedIndex == 1)
                 projectInfoLabel.Text = new LSharp.Studio.WTFPlugin.Projects.InstructionalProject().Info;
             else
-                projectInfoLabel.Text = "";
+                projectInfoLabel.Text = new LSharp.Studio.WTFPlugin.Projects.BasicProject().Info;
         }
         
         void Button1_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+                projectOutDirTextBox.Text += "\\" + projectNameTextBox.Text;
             if (!System.IO.Directory.Exists(projectOutDirTextBox.Text))
                 System.IO.Directory.CreateDirectory(projectOutDirTextBox.Text);
             if (listBox1.SelectedIndex == 0)
-                GlobalCurrentProject.Project = new LSharp.Studio.WTFPlugin.Projects.BasicProject().Create(projectOutDirTextBox.Text, projectNameTextBox.Text.ToLower().EndsWith(".lsproj") ? projectNameTextBox.Text : projectNameTextBox.Text + ".lsproj", projectNameTextBox.Text);
+                GlobalCurrentProject.Project = new LSharp.Studio.WTFPlugin.Projects.BasicProject().Create(projectOutDirTextBox.Text, projectOutDirTextBox.Text + "\\" + (projectNameTextBox.Text.ToLower().EndsWith(".lsproj") ? projectNameTextBox.Text : projectNameTextBox.Text + ".lsproj"), projectNameTextBox.Text);
             if (listBox1.SelectedIndex == 1)
-                GlobalCurrentProject.Project = new LSharp.Studio.WTFPlugin.Projects.InstructionalProject().Create(projectOutDirTextBox.Text, projectNameTextBox.Text.ToLower().EndsWith(".lsproj") ? projectNameTextBox.Text : projectNameTextBox.Text + ".lsproj", projectNameTextBox.Text);
+                GlobalCurrentProject.Project = new LSharp.Studio.WTFPlugin.Projects.InstructionalProject().Create(projectOutDirTextBox.Text, projectOutDirTextBox.Text + "\\" + (projectNameTextBox.Text.ToLower().EndsWith(".lsproj") ? projectNameTextBox.Text : projectNameTextBox.Text + ".lsproj"), projectNameTextBox.Text);
+            else 
+                GlobalCurrentProject.Project = new LSharp.Studio.WTFPlugin.Projects.BasicProject().Create(projectOutDirTextBox.Text, projectOutDirTextBox.Text + "\\" + (projectNameTextBox.Text.ToLower().EndsWith(".lsproj") ? projectNameTextBox.Text : projectNameTextBox.Text + ".lsproj"), projectNameTextBox.Text);
             GlobalCurrentProject.UpdateWindows();
             Close();
         }

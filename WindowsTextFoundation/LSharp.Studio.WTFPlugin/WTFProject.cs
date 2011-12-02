@@ -38,6 +38,7 @@ namespace LSharp.Studio.WTFPlugin
                 Files.Add(new File(n.InnerText, ProjectName + "\\" + System.IO.Path.GetFileName(n.InnerText)));
             OutputFileName = doc.SelectSingleNode("/project/outfile").InnerText;
             CompileOutputType =(WindowsTextFoundation.LSharpProvider.Compiler.OutputType) Enum.Parse(typeof(WindowsTextFoundation.LSharpProvider.Compiler.OutputType), doc.SelectSingleNode("/project/outputtype").InnerText);
+            XmlFilename = filename;
         }
 
         public void Save(string filename)
@@ -60,6 +61,7 @@ namespace LSharp.Studio.WTFPlugin
             writer.WriteElementString("outfile", OutputFileName);
             writer.WriteElementString("outputtype", CompileOutputType.ToString());
             writer.WriteEndElement();
+            writer.Close();
         }
 
         public CompilerResults Build()

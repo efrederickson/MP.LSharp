@@ -46,7 +46,7 @@ namespace LSharp.Studio.WTFPlugin
 
         public string MenuItemPath
         {
-            get { return "new/WindowsTextFoundation"; }
+            get { return "new/Windows Text Foundation"; }
         }
 
         public void Initialize()

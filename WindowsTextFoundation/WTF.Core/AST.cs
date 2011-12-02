@@ -100,7 +100,7 @@ namespace WindowsTextFoundation.Core.AST
             {
                 sb.AppendLine("(set_" + p.Name + " " + this.Name + " " + CreateLSharpConstructor(p.Value) + ")");
             }
-            // This is not an excessive change. It is acutally a character
+            // This is not an excessive change. It is actually a character
             // that VS and SD do not display. Open in notepad if you dont believe me.
             return sb.ToString().Replace("", ""); ;
         }
@@ -162,7 +162,7 @@ namespace WindowsTextFoundation.Core.AST
                 string constructorString = wtfobj.Substring(parenI + 1, lastParenI - parenI - 1).Trim();
                 returnval += constructorString.Replace(", ", " ");
                 returnval += ")";
-                return returnval;
+                return returnval; // format: (new obj args)
             }
             // unknown type, probably safe to do this.
             return wtfobj;

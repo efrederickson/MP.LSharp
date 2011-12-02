@@ -12,3 +12,13 @@ C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x
 C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\LSharp.Studio.WTFPlugin.Forms.ProjectItemsForm.resources
+C:\Elijah - Libraries\LSharp\WindowsTextFoundation\LSharp.Studio.WTFPlugin\obj\x86\Debug\LSharp.Studio.WTFPlugin.Forms.PropertiesForm.resources
+C:\Elijah - Libraries\LSharp\bin\Debug\Boot.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\Sample.ls
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.Microsoft.Build.targets
+C:\Elijah - Libraries\LSharp\bin\Debug\Templates\ConsoleProject.xpt
+C:\Elijah - Libraries\LSharp\bin\Debug\Templates\Empty.xft
+C:\Elijah - Libraries\LSharp\bin\Debug\Resources\LS-Mode.xshd
+C:\Elijah - Libraries\LSharp\bin\Debug\LSharp.SharpDevelop.AddIn.addin
+C:\Elijah - Libraries\LSharp\bin\Debug\FreeImage.dll
+C:\Elijah - Libraries\LSharp\bin\Debug\license.txt
