@@ -35,8 +35,8 @@ namespace WindowsTextFoundation.LSharpProvider
             param.OutputAssembly =System.IO.Path.Combine(System.IO.Path.GetDirectoryName(filename), System.IO.Path.GetFileNameWithoutExtension(filename) + (ot == OutputType.Dll ? ".dll" : ".exe"));
             param.EmbeddedResources.Add(Application.StartupPath + "\\LSharp.dll");
             param.ReferencedAssemblies.Add(Application.StartupPath + "\\LSharp.dll");
-            param.ReferencedAssemblies.Add("System.Windows.Forms");
-            param.ReferencedAssemblies.Add("System.Drawing");
+            param.ReferencedAssemblies.Add("System.Windows.Forms.dll");
+            param.ReferencedAssemblies.Add("System.Drawing.dll");
             string classname2 =(new System.Random(DateTime.Now.Millisecond)).Next().ToString();
             param.MainClass = "LSharp.ClassName" + classname2;
             switch (ot)
