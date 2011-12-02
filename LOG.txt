@@ -5,3 +5,4 @@
 11/11/2011:     Added Windows Text Foundation
 11/12/2011:     New L# Compiler and WTF Support for L# Studio
 11/28-30/11:    WTF Plugin work
+12/1/11:        Added Create/Open/Build WTF Projects 
