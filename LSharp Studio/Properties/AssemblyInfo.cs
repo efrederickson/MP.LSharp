@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("LSharp Studio")]
-[assembly: AssemblyCopyright("Copyright (C) mlnlover11 Productions 2011")]
+[assembly: AssemblyCopyright("Copyright (C) mlnlover11 Productions 2011-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
