@@ -6,3 +6,4 @@
 11/12/2011:     New L# Compiler and WTF Support for L# Studio
 11/28-30/11:    WTF Plugin work
 12/1/11:        Added Create/Open/Build WTF Projects 
+3/1/12:         Removed NRefactory project, cleaned folders, minor WTF edits
