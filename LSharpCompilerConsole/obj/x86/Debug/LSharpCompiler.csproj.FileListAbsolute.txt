@@ -1,9 +1,0 @@
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\Sample.ls
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\lsc.exe.config
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\lsc.exe
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\lsc.pdb
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\LSharp.dll
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\bin\Debug\LSharp.pdb
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\obj\x86\Debug\lsc.exe
-C:\Elijah - Libraries\X Software Suite\LSharp\LSharpCompilerConsole\obj\x86\Debug\lsc.pdb

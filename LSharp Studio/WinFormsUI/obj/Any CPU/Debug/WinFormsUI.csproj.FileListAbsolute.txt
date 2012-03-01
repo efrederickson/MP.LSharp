@@ -1,8 +1,0 @@
-C:\Elijah - Libraries\LSharp\bin\Debug\license.txt
-C:\Elijah - Libraries\LSharp\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
-C:\Elijah - Libraries\LSharp\LSharp Studio\WinFormsUI\obj\Any CPU\Debug\ResolveAssemblyReference.cache
-C:\Elijah - Libraries\LSharp\LSharp Studio\WinFormsUI\obj\Any CPU\Debug\WeifenLuo.WinFormsUI.Docking.Resources.resources
-C:\Elijah - Libraries\LSharp\LSharp Studio\WinFormsUI\obj\Any CPU\Debug\WeifenLuo.WinFormsUI.Docking.Strings.resources
-C:\Elijah - Libraries\LSharp\LSharp Studio\WinFormsUI\obj\Any CPU\Debug\GenerateResource.read.1.tlog
-C:\Elijah - Libraries\LSharp\LSharp Studio\WinFormsUI\obj\Any CPU\Debug\GenerateResource.write.1.tlog
-C:\Elijah - Libraries\LSharp\LSharp Studio\WinFormsUI\obj\Any CPU\Debug\WeifenLuo.WinFormsUI.Docking.dll

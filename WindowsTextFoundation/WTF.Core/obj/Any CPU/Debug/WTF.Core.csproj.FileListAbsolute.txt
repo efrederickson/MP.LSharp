@@ -1,5 +1,0 @@
-C:\Elijah - Libraries\LSharp\bin\Debug\WTF.Core.dll
-C:\Elijah - Libraries\LSharp\bin\Debug\WTF.Core.pdb
-C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.Core\obj\Any CPU\Debug\ResolveAssemblyReference.cache
-C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.Core\obj\Any CPU\Debug\WTF.Core.dll
-C:\Elijah - Libraries\LSharp\WindowsTextFoundation\WTF.Core\obj\Any CPU\Debug\WTF.Core.pdb

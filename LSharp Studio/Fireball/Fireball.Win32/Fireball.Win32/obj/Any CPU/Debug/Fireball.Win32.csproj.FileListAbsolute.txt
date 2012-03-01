@@ -1,3 +1,0 @@
-C:\Elijah - Libraries\LSharp\bin\Debug\Fireball.Win32.dll
-C:\Elijah - Libraries\LSharp\LSharp Studio\Fireball\Fireball.Win32\Fireball.Win32\obj\Any CPU\Debug\ResolveAssemblyReference.cache
-C:\Elijah - Libraries\LSharp\LSharp Studio\Fireball\Fireball.Win32\Fireball.Win32\obj\Any CPU\Debug\Fireball.Win32.dll
