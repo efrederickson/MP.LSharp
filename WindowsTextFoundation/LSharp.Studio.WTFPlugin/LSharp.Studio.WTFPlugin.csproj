@@ -51,8 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuildProjectPlugin.cs" />
-    <Compile Include="CreateProjectPlugin.cs" />
     <Compile Include="File.cs" />
     <Compile Include="Forms\CreateProjectForm.cs">
       <SubType>Form</SubType>
@@ -70,7 +68,9 @@
     </Compile>
     <Compile Include="GlobalCurrentProject.cs" />
     <Compile Include="IProject.cs" />
-    <Compile Include="OpenProjectPlugin.cs" />
+    <Compile Include="LSS Plugins\BuildProjectPlugin.cs" />
+    <Compile Include="LSS Plugins\CreateProjectPlugin.cs" />
+    <Compile Include="LSS Plugins\OpenProjectPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WTFProject.cs" />
   </ItemGroup>
@@ -110,6 +110,9 @@
     <EmbeddedResource Include="Forms\PropertiesForm.resx">
       <DependentUpon>PropertiesForm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LSS Plugins" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

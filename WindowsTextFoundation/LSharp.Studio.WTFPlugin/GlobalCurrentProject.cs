@@ -46,8 +46,16 @@ namespace LSharp.Studio.WTFPlugin
                 PropertiesForm.UpdateForm();
         }
         
-        public static void OpenDocumentFromIndex(int index)
+        public static void OpenDocumentFromName(string name)
         {
+            int index = -1;
+            for (int i = 0; i < Project.Files.Count; i++)
+                if (Project.Files[i].Path == name)
+                    index = i;
+            
+            if (index == -1)
+                return;
+            
             LSharp.Studio.Core.CodeEditingForm f = new LSharp.Studio.Core.CodeEditingForm(System.IO.Path.GetFileName(Project.Files[index].Path));
             f.LoadFile(Project.Files[index].Path);
             LSharp.Studio.MainForm.Instance.AddForm(f);

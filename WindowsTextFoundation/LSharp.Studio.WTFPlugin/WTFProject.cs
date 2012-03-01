@@ -35,7 +35,7 @@ namespace LSharp.Studio.WTFPlugin
             doc.Load(filename);
             ProjectName = doc.SelectSingleNode("/project/projectname").InnerText;
             foreach (XmlNode n in doc.SelectNodes("/project/files/file"))
-                Files.Add(new File(n.InnerText, ProjectName + "\\" + System.IO.Path.GetFileName(n.InnerText)));
+                Files.Add(new File(n.InnerText));
             OutputFileName = doc.SelectSingleNode("/project/outfile").InnerText;
             CompileOutputType =(WindowsTextFoundation.LSharpProvider.Compiler.OutputType) Enum.Parse(typeof(WindowsTextFoundation.LSharpProvider.Compiler.OutputType), doc.SelectSingleNode("/project/outputtype").InnerText);
             XmlFilename = filename;

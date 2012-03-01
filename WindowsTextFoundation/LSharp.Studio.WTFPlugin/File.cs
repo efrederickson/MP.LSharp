@@ -22,16 +22,9 @@ namespace LSharp.Studio.WTFPlugin
             set{path = value;}
         }
         
-        private string node;
-        public string NodePath
-        {
-            get {return node;}
-            set { node = value;}
-        }
-        public File(string paTH, string nodePath)
+        public File(string paTH)
         {
             Path = paTH;
-            NodePath = nodePath;
         }
     }
 }

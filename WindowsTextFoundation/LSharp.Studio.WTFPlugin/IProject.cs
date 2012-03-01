@@ -28,8 +28,8 @@ ENDOBJECT
             System.IO.File.WriteAllText(outputDir + "\\MainForm.wtf", wtfFileText);
             System.IO.File.WriteAllText(outputDir + "\\main.ls", lsFileText);
             WTFProject proj = new WTFProject();
-            proj.Files.Add(new File(outputDir + "\\MainForm.wtf", projectName + "\\MainForm.wtf"));
-            proj.Files.Add(new File(outputDir + "\\main.ls", projectName + "\\main.ls"));
+            proj.Files.Add(new File(outputDir + "\\MainForm.wtf"));
+            proj.Files.Add(new File(outputDir + "\\main.ls"));
             proj.CompileOutputType = WindowsTextFoundation.LSharpProvider.Compiler.OutputType.WinFormsExe;
             proj.XmlFilename = projectFile;
             proj.ProjectName = projectName;
@@ -79,8 +79,8 @@ ENDOBJECT
             System.IO.File.WriteAllText(outputDir + "\\MainForm.wtf", wtfFileText);
             System.IO.File.WriteAllText(outputDir + "\\main.ls", lsFileText);
             WTFProject proj = new WTFProject();
-            proj.Files.Add(new File(outputDir + "\\MainForm.wtf", projectName + "\\MainForm.wtf"));
-            proj.Files.Add(new File(outputDir + "\\main.ls", projectName + "\\main.ls"));
+            proj.Files.Add(new File(outputDir + "\\MainForm.wtf"));
+            proj.Files.Add(new File(outputDir + "\\main.ls"));
             proj.CompileOutputType = WindowsTextFoundation.LSharpProvider.Compiler.OutputType.Exe;
             proj.XmlFilename = projectFile;
             proj.ProjectName = projectName;

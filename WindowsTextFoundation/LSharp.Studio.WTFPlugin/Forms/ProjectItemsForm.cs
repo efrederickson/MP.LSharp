@@ -32,46 +32,13 @@ namespace LSharp.Studio.WTFPlugin.Forms
         public void UpdateForm()
         {
             treeView1.Nodes.Clear();
+            treeView1.Nodes.Add(GlobalCurrentProject.Project.ProjectName);
             foreach (File file in GlobalCurrentProject.Project.Files)
             {
-                TreeNode n = AddTreeNode(file.NodePath);
+                TreeNode n = new TreeNode(System.IO.Path.GetFileName(file.Path));
+                n.Tag = file.Path;
+                treeView1.Nodes[0].Nodes.Add(n);
             }
-        }
-        
-        private TreeNode AddTreeNode(string name)
-        {
-            if ((name.EndsWith("/"))) {
-                name = name.Substring(0, name.Length - 1);
-            }
-            TreeNode node = FindNodeForTag(name, treeView1.Nodes);
-            if ((node != null)) {
-                return node;
-            }
-            TreeNodeCollection pnodeCollection = null;
-            string parent = System.IO.Path.GetDirectoryName(name);
-            if ((string.IsNullOrEmpty(parent))) {
-                pnodeCollection = this.treeView1.Nodes;
-            } else {
-                pnodeCollection = AddTreeNode(parent.Replace("\\", "/")).Nodes;
-            }
-            node = new TreeNode();
-            node.Text = System.IO.Path.GetFileName(name);
-            node.Tag = name;
-            // full path
-            pnodeCollection.Add(node);
-            return node;
-        }
-
-        private TreeNode FindNodeForTag(string name, TreeNodeCollection nodes)
-        {
-            foreach (TreeNode node in nodes) {
-                if ((name == node.Tag)) {
-                    return node;
-                } else if ((name.StartsWith(node.Tag + "/"))) {
-                    return FindNodeForTag(name, node.Nodes);
-                }
-            }
-            return null;
         }
         
         void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -96,7 +63,7 @@ namespace LSharp.Studio.WTFPlugin.Forms
         {
             if (treeView1.SelectedNode != null)
             {
-                GlobalCurrentProject.OpenDocumentFromIndex(treeView1.SelectedNode.Index);
+                GlobalCurrentProject.OpenDocumentFromName(treeView1.SelectedNode.Tag as string);
             }
         }
     }
